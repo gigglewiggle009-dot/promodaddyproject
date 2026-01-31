@@ -94,7 +94,7 @@ export const contactData = [
   {
     image: Mobile,
     heading: "Phone Number",
-    details: ["+91 9602089182"],
+    details: ["+91 9602089182, 8690522210"],
   },
 ];
 
