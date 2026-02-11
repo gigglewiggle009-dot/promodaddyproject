@@ -286,15 +286,15 @@ export const footerTitle = {
       },
       {
         name: "About",
-        link: "/about",
+        link: "/aboutus",
       },
       {
         name: "Service",
-        link: "/service",
+        link: "/services",
       },
       {
         name: "Projects",
-        link: "/projects",
+        link: "/project",
       },
       {
         name: "Blog",

@@ -33,8 +33,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/clients",
-        destination: "/client",
+        source: "/client",
+        destination: "/clients",
         permanent: true,
       },
     ];
