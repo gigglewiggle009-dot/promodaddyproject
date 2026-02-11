@@ -5,7 +5,7 @@ import { logo } from "@/assets";
 
 export const MobileDrawer = ({ onClose }) => {
   return (
-    <div className="px-10 pt-10 bg-black h-[1800px]">
+    <div className="px-10 pt-10 bg-black h-screen">
       <div className="h-[70px] w-[70px]">
         <img src={logo.src} alt="logo" className="w-full h-full" />
       </div>
