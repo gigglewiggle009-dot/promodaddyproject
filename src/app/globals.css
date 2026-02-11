@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bgService {
+  background-attachment: fixed;
+}
+
+body {
+  color: white;
+  font-family: serif !important;
+}
+
+.font-roobert {
+  font-family: "Roobert", serif !important;
+}
+
+.font-assistant {
+  font-family: "Assistant", serif !important;
+}
+
+a {
+  cursor: pointer;
+}
+
+.slick-slide div {
+  height: 100%;
+}
+
+.slick-dots li button:before {
+  margin-top: 30px;
+  font-size: 21px !important;
+  color: #5b27f7 !important;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5b27f7;
+  border-radius: 200px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

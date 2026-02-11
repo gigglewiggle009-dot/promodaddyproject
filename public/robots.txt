@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://promodaddy.in
+
+# Sitemaps
+Sitemap: https://promodaddy.in/sitemap.xml
