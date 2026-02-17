@@ -5,13 +5,13 @@ import Competition from "@/assets/competitionYt.jpg";
 
 const videosData = [
     { id: 1, title: "", videoSource: "video.mp4", poster: "https://img.youtube.com/vi/hMy5za-m5Ew/maxresdefault.jpg", src: "https://youtu.be/hMy5za-m5Ew?si=5-KD81ZlDw5ZFAbQ" },
-    { id: 2, title: "", videoSource: "video.mp4", poster: "https://img.youtube.com/vi/7CNeqA9PBYE/maxresdefault.jpg", src: "https://www.youtube.com/embed/7CNeqA9PBYE" },
-    { id: 3, title: "", videoSource: "video.mp4", poster: "https://img.youtube.com/vi/7xNcMwyHQ6c/maxresdefault.jpg", src: "https://www.youtube.com/embed/7xNcMwyHQ6c" },
+    { id: 2, title: "", videoSource: "video.mp4", poster: "https://img.youtube.com/vi/7CNeqA9PBYE/maxresdefault.jpg", src: "https://youtu.be/hMy5za-m5Ew?si=m2fdPhEcbhw3p6Bq" },
+    { id: 3, title: "", videoSource: "video.mp4", poster: "https://img.youtube.com/vi/7xNcMwyHQ6c/maxresdefault.jpg", src: "https://youtu.be/7xNcMwyHQ6c?si=hd1MdVvF8O9fhNf9" },
     { id: 4, title: "", videoSource: "video.mp4", poster: "https://img.youtube.com/vi/qJ3fWRs8HMA/maxresdefault.jpg", src: "https://youtu.be/qJ3fWRs8HMA?si=dfTuUps72AOW5XHH" },
-    { id: 5, title: "", videoSource: "video.mp4", poster: "https://img.youtube.com/vi/G0ehTJhrxLQ/maxresdefault.jpg", src: "https://www.youtube.com/embed/G0ehTJhrxLQ" },
+    { id: 5, title: "", videoSource: "video.mp4", poster: "https://img.youtube.com/vi/G0ehTJhrxLQ/maxresdefault.jpg", src: "https://youtu.be/j_zhxvJuE9c?si=_6ncuWCk9NV5lnjF" },
     { id: 6, title: "", videoSource: "video.mp4", poster: "https://img.youtube.com/vi/95yrZXwZ31w/maxresdefault.jpg", src: "https://youtu.be/bNtOvlT9ZCQ?si=p4WW8Dx9CW1QYI_2" },
-    { id: 7, title: "", videoSource: "video.mp4", poster: "https://img.youtube.com/vi/AQ2S9fKPM-M/maxresdefault.jpg", src: "https://www.youtube.com/embed/AQ2S9fKPM-M" },
-    { id: 8, title: "", videoSource: "video.mp4", poster: "https://img.youtube.com/vi/cMJey2A0qLs/maxresdefault.jpg", src: "https://www.youtube.com/embed/cMJey2A0qLs" }
+    { id: 7, title: "", videoSource: "video.mp4", poster: "https://img.youtube.com/vi/AQ2S9fKPM-M/maxresdefault.jpg", src: "https://youtu.be/AQ2S9fKPM-M?si=Ed377_6b0NR6iVJ9" },
+    { id: 8, title: "", videoSource: "video.mp4", poster: "https://img.youtube.com/vi/cMJey2A0qLs/maxresdefault.jpg", src: "https://youtu.be/cMJey2A0qLs?si=tKjkkHdANG1Gk9pC" }
 ];
 
 export const Project = () => {
