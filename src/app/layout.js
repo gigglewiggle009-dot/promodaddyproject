@@ -11,9 +11,9 @@ import {
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "PromoDaddy Digital",
+  title: "Digital Marketing Agency in India | Promodaddy Digital",
   description:
-    "Creative Things Everyday ,We are digital agency that helps immersive and engaging user experiences that",
+    "Promodaddy Digital is a leading digital marketing agency in India offering SEO, social media marketing, Google Ads, branding and website development services to help businesses grow online.",
 };
 
 export default function RootLayout({ children }) {
