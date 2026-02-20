@@ -1,8 +1,10 @@
 "use client"
 import React from "react";
+import Link from "next/link";
 import styles from "./style.module.scss";
 import { motion } from "framer-motion"
-import { D, M } from "@/assets";
+import { HomeCarousel } from "..";
+import { A, B, C, D, E, H, M } from "@/assets";
 export const HomeBanner = () => {
 
   return (
@@ -54,7 +56,31 @@ export const HomeBanner = () => {
               </motion.span>
             ))}</p>
         </div>
-        
+        <div className={styles.buttonWrapper}>
+          <Link href={`/auth/register`}>
+            <motion.div
+              initial={{ x: 150, opacity: 0, }}
+              animate={{ x: 0, opacity: 1, }}
+              transition={{
+                duration: 1.5,
+                ease: "easeInOut",
+              }}>
+              {/* <SharedButton className={styles.button}>Let&apos;s Start</SharedButton> */}
+            </motion.div>
+          </Link>
+          <Link href={`auth/register`}>
+            <motion.div
+              initial={{ x: -150, opacity: 0, }}
+              animate={{ x: 0, opacity: 1, }}
+              transition={{
+                duration: 1.5,
+                ease: "easeInOut",
+              }}
+              className={styles.freeScanButtonBorder}>
+              {/* <SharedButton className={styles.freeScanButton}>Our Work</SharedButton> */}
+            </motion.div>
+          </Link>
+        </div>
       </div>
     </section>
   );

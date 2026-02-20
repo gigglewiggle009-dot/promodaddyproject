@@ -106,7 +106,7 @@ const UserRecommend = () => {
   return (
     <div className="relative py-32 bg-black tablet:py-100">
       <BgInfluencer className="absolute top-0 left-0 z-10 w-full h-full" />
-      <p className="relative z-20 font-serif text-3xl font-semibold text-center mb:16 md:mb-32 md:text-7xl leading-67">Our Happy Client</p>
+      <h2 className="relative z-20 font-serif text-3xl font-semibold text-center mb:16 md:mb-32 md:text-7xl leading-67">Our Happy Client</h2>
       <div className="relative z-20 mx-4">
         <CustomCarousel direction={locale === "he" ? "rtl" : "ltr"} loop={true}>
           {userData.map((item, index) => (
@@ -122,7 +122,7 @@ const UserRecommend = () => {
               key={index}
             >
               <img src={item.image.src} alt="img" className="w-[250px] h-[390px] rounded-2xl object-fill" />
-              <h1 className="py-2 font-serif text-4xl font-semibold text-gray-500">{item.name}</h1>
+              <h2 className="py-2 font-serif text-4xl font-semibold text-gray-500">{item.name}</h2>
               <p className="text-2xl font-semibold text-blue-gray-400 w-[300px]">{item.desc}</p>
             </motion.div>
           ))}
