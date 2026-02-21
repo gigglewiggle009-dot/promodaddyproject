@@ -1,9 +1,14 @@
-"use client";
+// "use client";
 import { contactbanner } from "@/assets";
 import { SmallBanner } from "@/components/SharedComponent";
 import Contact from "@/components/clnt";
 import LetsCreate from "@/components/letscreate";
 import React from "react";
+
+export const metadata = {
+  title: "Contact Us - PromoDaddy Digital",
+  description: "Get in touch with PromoDaddy Digital. We help transform your organization with innovative ideas and pragmatic solutions.",
+};
 
 function page() {
   return (

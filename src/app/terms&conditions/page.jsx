@@ -1,5 +1,12 @@
 import React from 'react'
 
+export const metadata = {
+  title: "Terms and Conditions | PromoDaddy Digital",
+  description:
+    "Read the Terms and Conditions of PromoDaddy Digital LLP. Understand your rights and obligations while using our services and website.",
+  keywords: "PromoDaddy, Digital Agency, Terms and Conditions, Privacy",
+};
+
 const page = () => {
   return (
     <div>

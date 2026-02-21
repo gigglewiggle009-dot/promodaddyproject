@@ -1,50 +1,59 @@
-import React from 'react'
-const page = () => {
+// src/app/privacy-policy/page.jsx
+import React from "react";
+import LetsCreate from "@/components/letscreate";
+
+export const metadata = {
+  title: "Privacy Policy - PromoDaddy Digital",
+  description:
+    "Read the privacy policy of PromoDaddy Digital LLP and understand how we collect, store, and handle your personal data securely.",
+};
+
+const PrivacyPolicyPage = () => {
   return (
-    <div>
-     <div className="  px-4 py-16 bg-black">
+    <div className="bg-black text-white">
+      <div className="px-4 py-16 max-w-5xl mx-auto">
         <h1 className="text-3xl font-bold mb-8">Promodaddy Digital LLP Privacy Policy</h1>
 
         <section className="mb-12">
-            <h2 className="text-xl font-semibold mb-4">Introduction</h2>
-            <p className="mb-4">This privacy policy (&ldquo;Policy&rdquo;) relates to the manner Promodaddy Digital LLP (&ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;) uses, handles and processes the data that you provide us in connection with using the products or services we offer.</p>
-            <p>By using this website or by availing goods or services offered by us, you agree to the terms and conditions of this Policy, and consent to our use, storage, disclosure, and transfer of your information or data in the manner described in this Policy.</p>
-            <p>We are committed to ensuring that your privacy is protected in accordance with applicable laws and regulations. We urge you to acquaint yourself with this Policy to familiarize yourself with the manner in which your data is being handled by us.</p>
-            <p>Promodaddy Digital LLP may change this Policy periodically and we urge you to check this page for the latest version of the Policy in order to keep yourself updated.</p>
+          <h2 className="text-xl font-semibold mb-4">Introduction</h2>
+          <p className="mb-4">
+            This privacy policy (“Policy”) relates to the manner Promodaddy Digital LLP (“we”, “us”, “our”) 
+            uses, handles, and processes the data that you provide us in connection with using the products 
+            or services we offer.
+          </p>
+          <p>
+            By using this website or availing goods/services offered by us, you agree to the terms of this Policy 
+            and consent to our use, storage, disclosure, and transfer of your data as described.
+          </p>
         </section>
 
         <section className="mb-12">
-            <h2 className="text-xl font-semibold mb-4">What Data Is Being Collected</h2>
-            <p>We may collect the following information from you:</p>
-            <ul className="list-disc pl-6 mb-4">
-                <li>Name</li>
-                <li>Contact information including address and email address</li>
-                <li>Demographic information or preferences or interests</li>
-                <li>Personal Data or Other information relevant/required for providing the goods or services to you</li>
-            </ul>
-            <p>Note: The meaning of Personal Data will be as defined under relevant Indian laws.</p>
-            <p>Please note that not with standing anything under this Policy as required under applicable Indian laws, we will not be storing any credit card, debit card or any other similar card data of yours.</p>
-            <p>All data or information collected from you will be strictly in accordance with applicable laws and guidelines.</p>
+          <h2 className="text-xl font-semibold mb-4">What Data Is Being Collected</h2>
+          <ul className="list-disc pl-6 mb-4">
+            <li>Name</li>
+            <li>Contact information including address and email</li>
+            <li>Demographic info, preferences, or interests</li>
+            <li>Other info relevant/required for providing goods or services</li>
+          </ul>
+          <p>Note: “Personal Data” is defined under relevant Indian laws.</p>
         </section>
 
         <section className="mb-12">
-            <h2 className="text-xl font-semibold mb-4">What We Do With the Data We Gather</h2>
-            <p>We require this data to provide you with the goods or services offered by us including but not limited, for the below set out purposes:</p>
-            <ul className="list-disc pl-6 mb-4">
-                <li>Internal record keeping.</li>
-                <li>For improving our products or services.</li>
-                <li>For providing updates to you regarding our products or services including any special offers.</li>
-                <li>To communicate information to you</li>
-                <li>For internal training and quality assurance purposes</li>
-            </ul>
+          <h2 className="text-xl font-semibold mb-4">What We Do With the Data</h2>
+          <ul className="list-disc pl-6 mb-4">
+            <li>Internal record keeping</li>
+            <li>Improving products or services</li>
+            <li>Providing updates or special offers</li>
+            <li>Communication and customer support</li>
+            <li>Internal training and quality assurance</li>
+          </ul>
         </section>
+      </div>
 
-
-       
+      {/* Optional CTA */}
+      <LetsCreate />
     </div>
-      
-    </div>
-  )
-}
+  );
+};
 
-export default page
+export default PrivacyPolicyPage;

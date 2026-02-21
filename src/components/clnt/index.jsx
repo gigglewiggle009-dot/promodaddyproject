@@ -24,9 +24,12 @@ const Contact = () => {
               <div className="flex-col hidden email-container group-hover:flex">
                 {item?.details?.map((d, i) => (
                   <div key={i}>
-                    <p href={d} className="text-base font-normal text-black">
-                      {d}
-                    </p>
+                    <a
+                      href={d.startsWith("mailto:") ? d : "#"}
+                      className="text-base font-normal text-black"
+                    >
+                      {d.replace("mailto:", "")}
+                    </a>
                   </div>
                 ))}
               </div>

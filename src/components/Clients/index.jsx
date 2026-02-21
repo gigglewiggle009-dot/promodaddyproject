@@ -1,10 +1,14 @@
-'use client'
+// 'use client'
 
 import React from 'react'
 import { SharedCard, SharedHeading } from '../SharedComponent'
 import { ourClient, ourElectionClient } from '@/constant'
 import { motion } from "framer-motion"
 
+export const metadata = {
+  title: "Service - PromoDaddy Digital",
+  description: "Explore the services offered by PromoDaddy Digital.",
+};
 
 export const Clients = () => {
     return (

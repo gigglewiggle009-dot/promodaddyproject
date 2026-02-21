@@ -1,4 +1,3 @@
-"use client";
 import { aboutbanner } from "@/assets";
 import { Services } from "@/components";
 import { SmallBanner } from "@/components/SharedComponent";
@@ -6,6 +5,11 @@ import Director from "@/components/director";
 import LetsCreate from "@/components/letscreate";
 import NumberTalks from "@/components/numbertalks";
 import React from "react";
+export const metadata = {
+  title: "About Us - PromoDaddy Digital",
+  description:
+    "Learn about PromoDaddy Digital, a creative digital agency delivering innovative solutions and immersive user experiences that drive results.",
+};
 
 function page() {
   return (

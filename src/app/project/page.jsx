@@ -1,10 +1,16 @@
-"use client";
+// "use client";
 import { Project } from "@/components";
 import { aboutbanner } from "@/assets";
 import LetsCreate from "@/components/letscreate";
 import Management from "@/components/management";
 import { SmallBanner } from "@/components/SharedComponent";
 import React from "react";
+
+export const metadata = {
+  title: "Our Projects - PromoDaddy Digital",
+  description:
+    "Explore the projects delivered by PromoDaddy Digital, showcasing innovative solutions and transformative results for our clients.",
+};
 
 function page() {
   return (

@@ -1,5 +1,10 @@
 import React from 'react';
 
+export const metadata = {
+  title: "Instant Service Delivery - PromoDaddy Digital",
+  description: "Most of our services start instantly. Get 24/7 support and a 7-day money-back guarantee if you're not satisfied.",
+};
+
 const Page = () => {
   return (
     <div className="px-4 py-16 bg-black">
