@@ -29,7 +29,7 @@ const nextConfig = {
       },
       {
         source: "/about",
-        destination: "/aboutus",
+        destination: "/about-us",
         permanent: true,
       },
       {

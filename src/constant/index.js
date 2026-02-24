@@ -267,13 +267,14 @@ export const navTitle = [
 
   {
     name: "About",
-    link: "/aboutus",
+    link: "/about-us",
   },
   
   {
     name: "Contact",
     link: "/contact",
   },
+  
 ];
 
 export const footerTitle = {
@@ -286,7 +287,7 @@ export const footerTitle = {
       },
       {
         name: "About",
-        link: "/aboutus",
+        link: "/about-us",
       },
       {
         name: "Service",
@@ -316,15 +317,15 @@ export const footerTitle = {
      
       {
         name: "Privacy Policy",
-        link: "/privacypolicy",
+        link: "/privacy-policy",
       },
       {
-        name: "Terms & Conditions",
-        link: "/terms&conditions",
+        name: "terms&conditions",
+        link: "/terms-and-conditions",
       },
       {
-        name: "ReFund",
-        link: "/reFund",
+        name: "Refund",
+        link: "/refund",
       },
     ],
   },
