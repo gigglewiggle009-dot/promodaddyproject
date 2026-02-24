@@ -325,7 +325,7 @@ export const footerTitle = {
       },
       {
         name: "Refund",
-        link: "/refund",
+        link: "/refunds",
       },
     ],
   },
