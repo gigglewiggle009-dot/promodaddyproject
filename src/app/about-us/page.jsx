@@ -6,7 +6,7 @@ import LetsCreate from "@/components/letscreate";
 import NumberTalks from "@/components/numbertalks";
 import React from "react";
 export const metadata = {
-  title: "About PromoDaddy Digital | Creative Digital Marketing & Branding Agency in India",
+  title: "About PromoDaddy Digital | Marketing Agency India",
   description:
     "Learn about PromoDaddy Digital, a creative digital agency delivering innovative solutions and immersive user experiences that drive results.",
 };

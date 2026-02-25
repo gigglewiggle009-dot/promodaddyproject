@@ -324,8 +324,8 @@ export const footerTitle = {
         link: "/terms-and-conditions",
       },
       {
-        name: "Refund",
-        link: "/refunds",
+        name: "Refunds",
+        link: "/refund-policy",
       },
     ],
   },

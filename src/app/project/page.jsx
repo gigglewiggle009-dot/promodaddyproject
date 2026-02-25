@@ -7,7 +7,7 @@ import { SmallBanner } from "@/components/SharedComponent";
 import React from "react";
 
 export const metadata = {
-  title: "Our Projects - PromoDaddy Digital",
+  title: "Digital Marketing Portfolio | PromoDaddy",
   description:
     "Explore the projects delivered by PromoDaddy Digital, showcasing innovative solutions and transformative results for our clients.",
 };
