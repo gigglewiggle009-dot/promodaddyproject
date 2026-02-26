@@ -13,6 +13,13 @@ import ppcImg from "@/assets/ppc.png";
 import webImg from "@/assets/web.png";
 import contentImg from "@/assets/content.png";
 import localImg from "@/assets/local.png";
+import celebrityImg from "@/assets/celebrity.png";
+import metaAdsImg from "@/assets/meta-ads.png";
+import youtubeImg from "@/assets/youtube.png";
+import influencerImg from "@/assets/influencer.png";
+import jewelleryImg from "@/assets/jewellery.png";
+import restaurantImg from "@/assets/restaurant.png";
+import electionImg from "@/assets/election.png";
 
 export const metadata = {
   title: "Digital Marketing Company in Kota",
@@ -100,10 +107,10 @@ export default function Page() {
   <div className="container mx-auto px-6 grid md:grid-cols-4 gap-10 text-center">
 
     {[
-      ["70+", "SEO Optimized Websites"],
-      ["50+", "Brand & Logo Designs"],
+      ["80+", "SEO Optimized Websites"],
+      ["40+", "Brand & Logo Designs"],
       ["500+", "Satisfied Clients"],
-      ["300000+", "Social Media Followers"],
+      ["400000+", "Social Media Followers"],
     ].map((item, index) => (
       <div
         key={index}
@@ -256,6 +263,21 @@ export default function Page() {
         desc: "Helping local and multi-store retailers grow footfall and online sales with digital strategies.",
         img: retailImg,
       },
+      {
+    title: "Jewellery",
+    desc: "Helping jewellery brands grow trust, showroom visits, and high-value leads through premium digital campaigns.",
+    img: jewelleryImg,
+  },
+  {
+    title: "Restaurants",
+    desc: "Increasing table bookings, online orders, and local visibility for restaurants using ads and local SEO.",
+    img: restaurantImg,
+  },
+  {
+    title: "Election Campaign",
+    desc: "Strategic political digital marketing including voter outreach, social media campaigns, and brand positioning.",
+    img: electionImg,
+  },
     ].map((item, i) => (
       <div
         key={i}
@@ -295,6 +317,10 @@ export default function Page() {
           <div className="grid md:grid-cols-3 gap-8">
 
   {[
+     [celebrityImg, "Celebrity PR & Personal Branding Marketing", "PR campaigns, media coverage and personal brand positioning"],
+      [metaAdsImg, "Meta Ads (Facebook & Instagram Ads)", "High-ROI paid campaigns for leads, sales and visibility"],
+      [youtubeImg, "YouTube Marketing", "Channel growth, video SEO and YouTube ad campaigns"],
+      [influencerImg, "Influencer Marketing", "Brand collaborations with trusted influencers for reach & trust"],
     [seoImg, "SEO Services", "Keyword research, on-page SEO, local SEO & GMB"],
     [socialImg, "Social Media Marketing", "Profile management & content strategy"],
     [ppcImg, "Google Ads / PPC", "High conversion paid campaigns"],
