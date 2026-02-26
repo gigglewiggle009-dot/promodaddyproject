@@ -224,87 +224,90 @@ export default function Page() {
   </div>
 </section>
 
-      {/* INDUSTRIES – WITH DETAILS */}
+    {/* INDUSTRIES – HORIZONTAL SCROLLER */}
 <section className="py-20 bg-[#0c0f14]">
-  <h2 className="text-center text-4xl font-medium mb-12">
+  <h2 className="text-center text-4xl font-medium mb-12 text-white">
     Industries We Serve
   </h2>
 
-  <div className="container mx-auto px-6 grid md:grid-cols-3 lg:grid-cols-6 gap-8">
+  <div className="px-6">
+    <div className="flex gap-8 overflow-x-auto scroll-smooth scrollbar-hide pb-4">
 
-    {[
-      {
-        title: "E-commerce",
-        desc: "Helping online stores increase traffic, conversions, and sales through SEO, paid ads, and performance marketing.",
-        img: ecommerceImg,
-      },
-      {
-        title: "Healthcare",
-        desc: "Driving patient inquiries and visibility for clinics, hospitals, and healthcare professionals.",
-        img: healthcareImg,
-      },
-      {
-        title: "Real Estate",
-        desc: "Generating high-quality property leads using targeted ads and location-based SEO strategies.",
-        img: realEstateImg,
-      },
-      {
-        title: "Education",
-        desc: "Supporting coaching institutes and educational brands in Kota with lead-focused digital campaigns.",
-        img: educationImg,
-      },
-      {
-        title: "Hospitality",
-        desc: "Boosting bookings and brand visibility for hotels, resorts, and restaurants through digital marketing.",
-        img: hospitalityImg,
-      },
-      {
-        title: "Retail",
-        desc: "Helping local and multi-store retailers grow footfall and online sales with digital strategies.",
-        img: retailImg,
-      },
-      {
-    title: "Jewellery",
-    desc: "Helping jewellery brands grow trust, showroom visits, and high-value leads through premium digital campaigns.",
-    img: jewelleryImg,
-  },
-  {
-    title: "Restaurants",
-    desc: "Increasing table bookings, online orders, and local visibility for restaurants using ads and local SEO.",
-    img: restaurantImg,
-  },
-  {
-    title: "Election Campaign",
-    desc: "Strategic political digital marketing including voter outreach, social media campaigns, and brand positioning.",
-    img: electionImg,
-  },
-    ].map((item, i) => (
-      <div
-        key={i}
-        className="bg-black border border-gray-700 rounded-xl p-6 text-center shadow hover:shadow-xl transition"
-      >
+      {[
+        {
+          title: "E-commerce",
+          desc: "Helping online stores increase traffic, conversions, and sales through SEO, paid ads, and performance marketing.",
+          img: ecommerceImg,
+        },
+        {
+          title: "Healthcare",
+          desc: "Driving patient inquiries and visibility for clinics, hospitals, and healthcare professionals.",
+          img: healthcareImg,
+        },
+        {
+          title: "Real Estate",
+          desc: "Generating high-quality property leads using targeted ads and location-based SEO strategies.",
+          img: realEstateImg,
+        },
+        {
+          title: "Education",
+          desc: "Supporting coaching institutes and educational brands in Kota with lead-focused digital campaigns.",
+          img: educationImg,
+        },
+        {
+          title: "Hospitality",
+          desc: "Boosting bookings and brand visibility for hotels and restaurants through digital marketing.",
+          img: hospitalityImg,
+        },
+        {
+          title: "Retail",
+          desc: "Helping retailers grow footfall and online sales with digital strategies.",
+          img: retailImg,
+        },
+        {
+          title: "Jewellery",
+          desc: "Helping jewellery brands grow trust and showroom visits through premium campaigns.",
+          img: jewelleryImg,
+        },
+        {
+          title: "Restaurants",
+          desc: "Increasing bookings and online orders using ads and local SEO.",
+          img: restaurantImg,
+        },
+        {
+          title: "Election Campaign",
+          desc: "Strategic political digital marketing including voter outreach and branding.",
+          img: electionImg,
+        },
+      ].map((item, i) => (
+        <div
+          key={i}
+          className="min-w-[280px] bg-black border border-gray-700 rounded-xl p-6 text-center shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300"
+        >
 
-        {/* IMAGE */}
-        <div className="w-full h-[120px] mb-4">
-          <img
-            src={item.img.src}
-            alt={`${item.title} Digital Marketing`}
-            className="w-full h-full object-contain"
-          />
+          {/* IMAGE */}
+          <div className="w-full h-[120px] mb-4">
+            <img
+              src={item.img.src}
+              alt={`${item.title} Digital Marketing`}
+              className="w-full h-full object-contain"
+            />
+          </div>
+
+          {/* TITLE */}
+          <h3 className="text-lg font-semibold mb-3 text-white">
+            {item.title}
+          </h3>
+
+          {/* DESCRIPTION */}
+          <p className="text-sm text-gray-400 leading-relaxed">
+            {item.desc}
+          </p>
+
         </div>
+      ))}
 
-        {/* TITLE */}
-        <h3 className="text-lg font-medium mb-3">
-          {item.title}
-        </h3>
-
-        {/* DESCRIPTION */}
-        <p className="text-sm text-gray-400 leading-relaxed">
-          {item.desc}
-        </p>
-
-      </div>
-    ))}
+    </div>
   </div>
 </section>
 
