@@ -15,11 +15,11 @@ import contentImg from "@/assets/content.png";
 import localImg from "@/assets/local.png";
 
 export const metadata = {
-  title: "Digital Marketing Company in Kota | SEO, PPC & Social Media Experts",
+  title: "Digital Marketing Company in Kota",
   description:
-    "Looking for the best digital marketing company in Kota? We help businesses grow with SEO, social media marketing, PPC, branding and website development services.",
+    "Looking for the best digital marketing agency in Kota? We help businesses grow with SEO, social media marketing, PPC, branding and website development services.",
   alternates: {
-    canonical: "https://yourwebsite.com/digital-marketing-company-in-kota",
+    canonical: "https://yourwebsite.com/digital-marketing-agency-in-kota",
   },
 };
 
@@ -50,7 +50,7 @@ export default function Page() {
     {/* LEFT CONTENT */}
     <div>
       <h1 className="text-5xl font-semibold mb-6">
-        Trusted Digital Marketing Company in Kota for Sustainable Business Growth
+        Trusted Digital Marketing Agency in Kota for Sustainable Business Growth
       </h1>
 
       <p className="text-gray-300 mb-8 leading-relaxed">
