@@ -75,20 +75,31 @@ export const SharedFooter = () => {
                   <RedLine />
                 </div>
                 <div className="space-y-2">
-                  {footerTitle?.linkTwo.content.map((content, index) => (
-                    <Link
-                      key={index}
-                      href={content.link}
-                      className="block text-base transition-all duration-300 ease-in-out w-fit"
-                    >
-                      <span className="relative inline-block group">
-                        <span className="flex items-center gap-x-2 bg-left-bottom bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out py-1">
-                          <MdOutlineDoubleArrow />
-                          <span>{content.name}</span>
-                        </span>
-                      </span>
-                    </Link>
-                  ))}
+                  {footerTitle?.linkTwo.content.map((content, index) => {
+
+  if (content.type === "heading") {
+    return (
+      <p key={index} className="mt-4 font-semibold text-white">
+        {content.name}
+      </p>
+    );
+  }
+
+  return (
+    <Link
+      key={index}
+      href={content.link}
+      className="block text-base transition-all duration-300 ease-in-out w-fit"
+    >
+      <span className="relative inline-block group">
+        <span className="flex items-center gap-x-2 bg-left-bottom bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out py-1">
+          <MdOutlineDoubleArrow />
+          <span>{content.name}</span>
+        </span>
+      </span>
+    </Link>
+  );
+})}
                 </div>
               </div>
               <div>

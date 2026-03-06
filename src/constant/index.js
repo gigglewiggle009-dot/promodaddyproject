@@ -327,6 +327,23 @@ export const footerTitle = {
         name: "Refunds",
         link: "/refund-policy",
       },
+      {
+      type: "heading",
+      name: "Our Local Presence",
+    },
+
+    {
+      name: "Kota",
+      link: "/digital-marketing-agency-in-kota",
+    },
+    {
+      name: "Jaipur",
+      link: "/digital-marketing-agency-in-jaipur",
+    },
+    {
+      name: "Delhi",
+      link: "/digital-marketing-agency-in-delhi",
+    },
     ],
   },
 };

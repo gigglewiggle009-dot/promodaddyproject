@@ -317,7 +317,7 @@ export default function Page() {
             Our Digital Marketing Services in Kota
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-4 gap-8">
 
   {[
      [celebrityImg, "Celebrity PR & Personal Branding Marketing", "PR campaigns, media coverage and personal brand positioning"],
