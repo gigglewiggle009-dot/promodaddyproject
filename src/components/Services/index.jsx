@@ -15,7 +15,7 @@ export const Services = () => {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1,ease:'easeOut' }}
           >
-            <img src={BrandService.src} className="lg:w-[450px] w-[330px] md:h-[430px] md:w-[430px]  mx-auto h-full rounded-full " alt="Service" />
+            {/* <img src={BrandService.src} className="lg:w-[450px] w-[330px] md:h-[430px] md:w-[430px]  mx-auto h-full rounded-full " alt="Service" /> */}
           </motion.div>
           <div className="mx-16">
             <motion.div

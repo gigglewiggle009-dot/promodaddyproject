@@ -30,9 +30,9 @@
 import HomePageClient from "./HomePageClient";
 
 export const metadata = {
-  title: "PromoDaddy Digital - Creative Digital Agency",
+  title: "PromoDaddy Digital - Best Digital Marketing Agency in India",
   description:
-    "PromoDaddy Digital provides innovative digital solutions, immersive user experiences, and tailored services for clients.",
+    "Promodaddy Digital - a results-driven digital marketing agency in India, helping brands grow through SEO, Google Ads, social media and lead generation",
 };
 
 export default function Page() {

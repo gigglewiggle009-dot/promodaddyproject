@@ -69,8 +69,15 @@ import M from './m.jpg'
 import KulsumShadabWahab from './Kulsum-ShadabWahab.jpg'
 import SonuSoodFoundation from './scf.jpeg'
 import EbrahimMhyn from './ebrahimMhyn.jpg'
-
-
+import SonuSoodCeleb from './sonusood.jpg'
+import RashidKhan from './rashidkhan.jpg'
+import AshokChandna from './ashokchandna.jpg'
+import MahimaChaudhary from './mahimachaudhary.jpg'
+import Process1 from './process1.jpg'
+import Process2 from './process2.jpg'
+import Process3 from './process3.jpg'
+import Process4 from './process4.jpg'
+import Process5 from './process5.jpg'
 
 export {
   EbrahimMhyn,
@@ -136,4 +143,13 @@ export {
   LeadGeneration,
   FreeStart,
   arrow,
+  SonuSoodCeleb,
+  RashidKhan,
+  MahimaChaudhary,
+  AshokChandna,
+  Process1,
+  Process2,
+  Process3,
+  Process4,
+  Process5,
 };
