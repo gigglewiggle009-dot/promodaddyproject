@@ -30,9 +30,9 @@
 import HomePageClient from "./HomePageClient";
 
 export const metadata = {
-  title: "PromoDaddy Digital - Best Digital Marketing Agency in India",
+  title: "PromoDaddy Digital - Best Digital Marketing Agency in India | Trusted by Sonu Sood, Mohammad Shami",
   description:
-    "Promodaddy Digital - a results-driven digital marketing agency in India, helping brands grow through SEO, Google Ads, social media and lead generation",
+    "India's top-rated digital marketing agency trusted by celebrities & businesses.SEO, Google Ads, Social Media & more. 160+ Happy Clients. 5.0 Stars. Free Consultation!",
 };
 
 export default function Page() {
