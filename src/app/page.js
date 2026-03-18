@@ -32,7 +32,7 @@ import HomePageClient from "./HomePageClient";
 export const metadata = {
   title: "PromoDaddy Digital - Best Digital Marketing Agency in India | Trusted by Sonu Sood, Mohammad Shami",
   description:
-    "India's top-rated digital marketing agency trusted by celebrities & businesses.SEO, Google Ads, Social Media & more. 160+ Happy Clients. 5.0 Stars. Free Consultation!",
+    "Promodaddy Digital – Trusted digital marketing agency in India offering celebrities & SEO, Google Ads & social media marketing. 160+ happy clients. Free consultation!",
 };
 
 export default function Page() {

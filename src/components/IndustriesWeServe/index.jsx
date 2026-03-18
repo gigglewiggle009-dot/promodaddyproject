@@ -55,8 +55,8 @@ export const IndustriesWeServe = () => {
               {industries.map((_, i) => {
                 const angle = (i / industries.length) * 2 * Math.PI;
 
-                const x = center + radius * Math.cos(angle);
-                const y = center + radius * Math.sin(angle);
+                const x = Number((center + radius * Math.cos(angle)).toFixed(2));
+                const y = Number((center + radius * Math.sin(angle)).toFixed(2));
 
                 return (
                   <line
@@ -79,8 +79,8 @@ export const IndustriesWeServe = () => {
             {/* ITEMS */}
             {industries.map((item, i) => {
               const angle = (i / industries.length) * 2 * Math.PI;
-              const x = radius * Math.cos(angle);
-              const y = radius * Math.sin(angle);
+              const x = Number((radius * Math.cos(angle)).toFixed(2));
+              const y = Number((radius * Math.sin(angle)).toFixed(2));
 
               return (
                 <div
