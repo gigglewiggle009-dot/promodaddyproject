@@ -33,6 +33,9 @@ export const metadata = {
   title: "PromoDaddy Digital - Best Digital Marketing Agency in India | Trusted by Sonu Sood, Mohammad Shami",
   description:
     "Promodaddy Digital – Trusted digital marketing agency in India offering celebrities & SEO, Google Ads & social media marketing. 160+ happy clients. Free consultation!",
+    alternates: {
+    canonical: "www.promodaddy.in",
+  },
 };
 
 export default function Page() {
