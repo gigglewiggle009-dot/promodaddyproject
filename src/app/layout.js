@@ -11,9 +11,20 @@ import {
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Digital Marketing Agency in India | Promodaddy Digital",
+  metadataBase: new URL("https://www.promodaddy.in"), // ✅ MUST
+
+  title: {
+    default: "Digital Marketing Agency in India | Promodaddy Digital",
+    template: "%s | Promodaddy Digital", // 🔥 SEO boost
+  },
+
   description:
-    "Promodaddy Digital is a leading digital marketing agency in India offering SEO, social media marketing, Google Ads, branding and website development services to help businesses grow online.",
+    "Promodaddy Digital is a leading digital marketing agency in India offering SEO, social media marketing, Google Ads, branding and website development services.",
+
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({ children }) {

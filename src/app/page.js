@@ -34,7 +34,7 @@ export const metadata = {
   description:
     "Promodaddy Digital – Trusted digital marketing agency in India offering celebrities & SEO, Google Ads & social media marketing. 160+ happy clients. Free consultation!",
     alternates: {
-    canonical: "www.promodaddy.in",
+    canonical: "/",
   },
 };
 
