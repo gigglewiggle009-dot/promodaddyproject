@@ -78,6 +78,12 @@ import Process2 from './process2.jpg'
 import Process3 from './process3.jpg'
 import Process4 from './process4.jpg'
 import Process5 from './process5.jpg'
+import LaptopFrame from "./laptop-frame.jpg";
+import PhoneFrame from "./phone-frame.png";
+import BackgroundImage from "./bg-image.jpg";
+import DigitalMarketing from "./digitalmarketing.png";
+import TeamImage from "./team.jpg";
+import BannerGif from  "./banner-gif-new-one.gif";
 
 export {
   EbrahimMhyn,
@@ -152,4 +158,10 @@ export {
   Process3,
   Process4,
   Process5,
+  LaptopFrame,
+  PhoneFrame,
+  BackgroundImage,
+  DigitalMarketing,
+  TeamImage,
+  BannerGif,
 };

@@ -3,10 +3,8 @@ import { SharedHeader } from "../SharedHeader";
 
 export const SharedLayout = ({ children }) => {
   return (
-    <>
-      <SharedHeader />
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       {children}
-      <SharedFooter />
-    </>
+    </div>
   );
 };

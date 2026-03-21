@@ -31,31 +31,6 @@ export const TextMarque = () => {
         ))}
       </Marquee>
 
-       {/* ADD THIS SECTION BELOW MARQUEE */}
-
-        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white mt-12">
-
-          <div>
-            <h3 className="text-3xl font-bold">500+</h3>
-            <p className="text-gray-400 text-sm">Projects Delivered</p>
-          </div>
-
-          <div>
-            <h3 className="text-3xl font-bold">160+</h3>
-            <p className="text-gray-400 text-sm">Google Reviews</p>
-          </div>
-
-          <div>
-            <h3 className="text-3xl font-bold">5.0 ⭐</h3>
-            <p className="text-gray-400 text-sm">Google Rating</p>
-          </div>
-
-          <div>
-            <h3 className="text-3xl font-bold">8+</h3>
-            <p className="text-gray-400 text-sm">Years Experience</p>
-          </div>
-
-        </div>
     </section>
     </div>
   );

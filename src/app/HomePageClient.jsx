@@ -7,22 +7,34 @@ import { IndustriesWeServe } from "@/components/IndustriesWeServe";
 import { WhyPromodaddy } from "@/components/WhyPromodaddy";
 import { Achievements } from "@/components/Achievements";
 import { OurProcess } from "@/components/OurProcess";
+import { AboutSection } from "@/components/AboutSection";
+import {TrustedClientsKeywords} from "@/components/TrustedClientsKeywords";
 import { Clients, Services, HomeBanner, TextMarque, HomeCarousel } from "@/components";
+import { AwardsSection } from "@/components/AwardsSection";
+import {ContactDetails} from "@/components/ContactDetails"
+import { ServiceAds } from "@/components/ServiceAds";
+
 
 const HomePageClient = () => {
   return (
     <main>
+      
       <HomeBanner />
+      <AboutSection/>
       <TextMarque />
+      <TrustedClientsKeywords/>
       <CelebrityClients />
       <WhyPromodaddy />
       <IndustriesWeServe/>
       <Achievements/>
+      <AwardsSection/>
       <OurProcess/>
+      <ServiceAds/>
       <Services />
-      <Clients />
+      {/* <Clients /> */}
+      <ContactDetails/>
       {/* <UserRecommend /> */}
-      <HomeCarousel />
+      {/* <HomeCarousel /> */}
       <LetsCreate />
     </main>
   );

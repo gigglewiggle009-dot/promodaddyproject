@@ -81,12 +81,12 @@ export const CelebrityClients = () => {
   ];
 
   return (
-    <section className="bg-black text-white py-24">
+    <section className="bg-black text-white py-1">
 
       <div className="max-w-7xl mx-auto px-6 text-center">
 
         <h2 className="text-4xl md:text-5xl font-bold mb-6">
-          Trusted by India's Biggest Names
+          Trusted by India's Biggest Celebrity
         </h2>
 
         <p className="text-gray-400 max-w-2xl mx-auto mb-16">
