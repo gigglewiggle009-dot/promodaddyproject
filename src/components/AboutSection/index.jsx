@@ -108,7 +108,7 @@ export const AboutSection = () => {
             <div>
               <div className="w-16 h-[2px] bg-gradient-to-r from-purple-500 to-pink-500 mb-4"></div>
               <h4 className="text-3xl font-bold text-purple-400">
-                <Counter target={8} suffix="+" />
+                <Counter target={12} suffix="+" />
               </h4>
               <p className="text-gray-400 text-sm mt-1">
                 Years Experience

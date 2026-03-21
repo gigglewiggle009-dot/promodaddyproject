@@ -78,7 +78,7 @@ export const WhyPromodaddy = () => {
           </div>
 
           <div>
-            <h3 className="text-3xl font-bold text-purple-400">8+</h3>
+            <h3 className="text-3xl font-bold text-purple-400">12+</h3>
             <p className="text-gray-400 text-sm">Years Experience</p>
           </div>
 
