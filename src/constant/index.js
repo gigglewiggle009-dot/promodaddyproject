@@ -265,9 +265,15 @@ export const navTitle = [
     link: "/blog",
   },
 
+ 
   {
     name: "About",
     link: "/about-us",
+  },
+
+  {
+    name: "kota",
+    link: "/kota",
   },
   
   {

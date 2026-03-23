@@ -11,7 +11,7 @@ import { AboutSection } from "@/components/AboutSection";
 import {TrustedClientsKeywords} from "@/components/TrustedClientsKeywords";
 import { Clients, Services, HomeBanner, TextMarque, HomeCarousel } from "@/components";
 import { AwardsSection } from "@/components/AwardsSection";
-import {ContactDetails} from "@/components/ContactDetails"
+import {ContactDetails} from "@/components/ContactDetails";
 import { ServiceAds } from "@/components/ServiceAds";
 
 

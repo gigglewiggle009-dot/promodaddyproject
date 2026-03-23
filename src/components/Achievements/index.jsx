@@ -113,7 +113,7 @@ export const Achievements = () => {
     <div className="relative bg-[#111] border border-blue-500/30 rounded-2xl p-10 text-center hover:-translate-y-2 transition">
 
       <h3 className="text-5xl font-bold text-blue-400">
-        <Counter target={160}/>+
+        <Counter target={1600}/>+
       </h3>
 
       <p className="text-gray-400 mt-3">
