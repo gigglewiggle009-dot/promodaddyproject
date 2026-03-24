@@ -64,7 +64,7 @@ const industries = [
 
 const duplicatedIndustries = [...industries, ...industries];
 
-export const KotaIndustriesSection = () => {
+export const KotaIndustriesSections = () => {
   return (
     <section className="overflow-hidden bg-black py-16 text-white sm:py-20 lg:py-15">
       <SharedLayout>

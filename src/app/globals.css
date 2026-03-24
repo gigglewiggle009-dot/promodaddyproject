@@ -49,3 +49,25 @@ a {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+/* added new css  */
+.industry-marquee-track {
+  display: flex;
+  align-items: stretch;
+  width: max-content;
+  animation: industry-scroll 35s linear infinite;
+  will-change: transform;
+}
+
+.industry-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes industry-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
