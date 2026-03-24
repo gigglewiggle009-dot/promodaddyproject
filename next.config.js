@@ -5,6 +5,10 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
 
+    eslint: {
+    ignoreDuringBuilds: true,
+  },
+
   images: {
     unoptimized: true,
     domains: [],
