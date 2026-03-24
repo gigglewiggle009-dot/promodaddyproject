@@ -1,7 +1,7 @@
-import { KotaHeroSection } from "@/components/kota/KotaHeroSection";
-import { KotaAboutSection } from "@/components/kota/KotaAboutSection";
+import { KotaHeroSection } from "@/components/Kota/KotaHeroSection";
+import { KotaAboutSection } from "@/components/Kota/KotaAboutSection";
 import { KotaIndustriesSections } from "@/components/Kota/KotaIndustriesSections";
-import { KotaServicesSection } from "@/components/kota/KotaServicesSection";
+import { KotaServicesSection } from "@/components/Kota/KotaServicesSection";
 import { KotaFaqSection } from "@/components/kota/KotaFaqSection";
 import {ContactDetails} from "@/components/ContactDetails"
 

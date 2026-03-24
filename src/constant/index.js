@@ -272,7 +272,7 @@ export const navTitle = [
   },
 
   {
-    name: "kota",
+    name: "Kota",
     link: "/kota",
   },
   
