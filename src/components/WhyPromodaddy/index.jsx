@@ -14,8 +14,8 @@ export const WhyPromodaddy = () => {
   const points = [
     {
       icon: <FaChartLine />,
-      title: "Results, Not Promises",
-      desc: "Built for Growth, Designed for Results Everything we do is focused on helping your business grow faster with simple strategies and real results.",
+      title: "Built for Growth",
+      desc: "Designed for Results Everything we do is focused on helping your business grow faster with simple strategies and real results.",
     },
 
     {
@@ -72,7 +72,7 @@ export const WhyPromodaddy = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 text-center mb-20">
 
           <div>
-            <h3 className="text-3xl font-bold text-purple-400">500+</h3>
+            <h3 className="text-3xl font-bold text-purple-400">1000+</h3>
             <p className="text-gray-400 text-sm">Clients Served</p>
           </div>
 
@@ -82,7 +82,7 @@ export const WhyPromodaddy = () => {
           </div>
 
           <div>
-            <h3 className="text-3xl font-bold text-purple-400">12+</h3>
+            <h3 className="text-3xl font-bold text-purple-400">20+</h3>
             <p className="text-gray-400 text-sm">Industries Served</p>
           </div>
 
