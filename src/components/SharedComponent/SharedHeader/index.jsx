@@ -33,11 +33,15 @@ export const SharedHeader = () => {
         
         {/* Main Flex Container */}
         <div className="flex items-center justify-between w-full">
-          
-          {/* Logo */}
-          <div className="h-[70px] w-[70px]">
-            <img src={logo.src} alt="logo" className="w-full h-full" />
-          </div>
+
+{/* Logo */}
+<Link href="/" className="block h-[70px] w-[70px]">
+  <img
+    src={logo.src}
+    alt="logo"
+    className="w-full h-full cursor-pointer hover:opacity-80 transition"
+  />
+</Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-[140px]">
