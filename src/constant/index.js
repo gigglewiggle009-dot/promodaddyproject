@@ -270,12 +270,6 @@ export const navTitle = [
     name: "About",
     link: "/about-us",
   },
-
-  {
-    name: "Kota",
-    link: "/kota",
-  },
-  
   {
     name: "Contact",
     link: "/contact",
