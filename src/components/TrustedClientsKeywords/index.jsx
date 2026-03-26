@@ -32,14 +32,14 @@ export const TrustedClientsKeywords = () => {
 
       <div className="max-w-10xl mx-auto px-6 relative z-10">
 
-        <motion.h2
+        {/* <motion.h2
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           className="text-4xl md:text-5xl font-bold text-center mb-16"
         >
           Trusted by India's Biggest Names
-        </motion.h2>
+        </motion.h2> */}
 
         {/* Celebrities */}
         <Marquee speed={70} pauseOnHover gradient={false}>

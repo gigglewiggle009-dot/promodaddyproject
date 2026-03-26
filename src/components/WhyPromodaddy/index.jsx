@@ -15,7 +15,7 @@ export const WhyPromodaddy = () => {
     {
       icon: <FaChartLine />,
       title: "Results, Not Promises",
-      desc: "We focus on measurable ROI — more leads, more conversions and real business growth.",
+      desc: "Built for Growth, Designed for Results Everything we do is focused on helping your business grow faster with simple strategies and real results.",
     },
 
     {
@@ -62,8 +62,7 @@ export const WhyPromodaddy = () => {
           </h2>
 
           <p className="text-gray-400 max-w-2xl mx-auto">
-            We combine strategy, creativity, and performance marketing to
-            deliver measurable growth for brands and businesses.
+            We use smart strategy, creative ideas, and performance marketing to help your business grow with real results.
           </p>
 
         </div>

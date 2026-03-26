@@ -2,12 +2,12 @@ import Marquee from "react-fast-marquee";
 import { FaStarOfLife } from "react-icons/fa6";
 
 const marqueContent = [
-  "Appetite that grow your business",
-  "Appetite that grow your business",
-  "Appetite that grow your business",
-  "Appetite that grow your business",
-  "Appetite that grow your business",
-  "Appetite that grow your business",
+  "Trusted by India's Biggest Names",
+  "Trusted by India's Biggest Names",
+  "Trusted by India's Biggest Names",
+  "Trusted by India's Biggest Names",
+  "Trusted by India's Biggest Names",
+  "Trusted by India's Biggest Names",
 ];
 
 export const TextMarque = () => {

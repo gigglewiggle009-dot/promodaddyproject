@@ -270,6 +270,12 @@ export const navTitle = [
     name: "About",
     link: "/about-us",
   },
+
+  {
+    name: "Kota",
+    link: "/digital-marketing-agency-in-kota",
+  },
+  
   {
     name: "Contact",
     link: "/contact",

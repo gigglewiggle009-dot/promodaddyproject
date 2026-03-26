@@ -25,12 +25,12 @@ const HomePageClient = () => {
       <TextMarque />
       <TrustedClientsKeywords/>
       <CelebrityClients />
-      <WhyPromodaddy />
+      <ServiceAds/>
       <IndustriesWeServe/>
       <Achievements/>
+      <WhyPromodaddy />
       <AwardsSection/>
       <OurProcess/>
-      <ServiceAds/>
       {/* <Services /> */}
       <HomeFaqSection/>
       {/* <Clients /> */}

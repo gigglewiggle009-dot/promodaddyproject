@@ -61,7 +61,9 @@ export default function RootLayout({ children }) {
             showAtBottom={false}
           />
           <SharedHeader />
-          {children}
+          <main className="pt-[95px] sm:pt-[110px]">
+            {children}
+          </main>
           <SharedFooter />
           <GoToTop />
         </div>
