@@ -49,7 +49,7 @@ export const ServiceAds = () => {
           </h2>
 
           <p className="text-white/70 text-sm sm:text-base md:text-lg max-w-3xl mb-10 leading-relaxed">
-            We don&apos;t just provide services; we build growth engines for your business.
+           We use smart strategy, creative ideas, and performance marketing to help your business grow with real results.
           </p>
 
           {/* GRID */}
