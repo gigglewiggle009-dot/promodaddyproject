@@ -14,8 +14,8 @@ export const WhyPromodaddy = () => {
   const points = [
     {
       icon: <FaChartLine />,
-      title: "Built for Growth",
-      desc: "Designed for Results Everything we do is focused on helping your business grow faster with simple strategies and real results.",
+      title: "Built for Growth - Designed for Results ",
+      desc: "Everything we do is focused on helping your business grow faster with simple strategies and real results.",
     },
 
     {

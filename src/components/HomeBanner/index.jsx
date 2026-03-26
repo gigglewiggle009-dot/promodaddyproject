@@ -1,11 +1,12 @@
 "use client";
-
+import Link from "next/link";
 import BannerGif from "@/assets/banner-gif-new-one.gif";
 import React, { useState } from "react";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 import { X } from "lucide-react";
 import { SharedLayout } from "@/components/SharedComponent";
+import BgHelp from "@/assets/bgHelp1.png";
 
 /* COUNTER */
 const Counter = ({ target, suffix = "", decimals = 0 }) => {
@@ -124,9 +125,16 @@ Message: ${message}`;
                 </a>
               </div>
 
-              <p className="text-gray-400 text-xs sm:text-sm mb-2">
-                📍 Serving: Kota | Jaipur | Delhi | Mumbai | Pan India
-              </p>
+             <p className="text-gray-400 text-xs sm:text-sm mb-2">
+              📍 Serving:{" "}
+              <Link
+                href="/digital-marketing-agency-in-kota"
+                className="text-orange-400 hover:underline"
+              >
+                Kota
+              </Link>{" "}
+              | Jaipur | Delhi | Mumbai | Pan India
+            </p>
             </div>
 
             {/* RIGHT */}
