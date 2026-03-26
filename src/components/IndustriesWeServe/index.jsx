@@ -30,7 +30,7 @@ export const IndustriesWeServe = () => {
   const center = 300;
 
   return (
-    <section className="bg-[#0b0b0b] text-white py-15 relative overflow-hidden">
+    <section className="bg-[#0b0b0b] text-white py-20 relative overflow-hidden">
 
       {/* Glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(139,92,246,0.15),_transparent_70%)]"></div>

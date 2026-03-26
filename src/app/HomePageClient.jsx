@@ -13,6 +13,7 @@ import { Clients, Services, HomeBanner, TextMarque, HomeCarousel } from "@/compo
 import { AwardsSection } from "@/components/AwardsSection";
 import {ContactDetails} from "@/components/ContactDetails";
 import { ServiceAds } from "@/components/ServiceAds";
+import {HomeFaqSection} from "@/components/HomeFaqSection";
 
 
 const HomePageClient = () => {
@@ -20,7 +21,7 @@ const HomePageClient = () => {
     <main>
       
       <HomeBanner />
-      <AboutSection/>
+      {/* <AboutSection/> */}
       <TextMarque />
       <TrustedClientsKeywords/>
       <CelebrityClients />
@@ -30,9 +31,10 @@ const HomePageClient = () => {
       <AwardsSection/>
       <OurProcess/>
       <ServiceAds/>
-      <Services />
+      {/* <Services /> */}
+      <HomeFaqSection/>
       {/* <Clients /> */}
-      <ContactDetails/>
+      {/* <ContactDetails/> */}
       {/* <UserRecommend /> */}
       {/* <HomeCarousel /> */}
       <LetsCreate />

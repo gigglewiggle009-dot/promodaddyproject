@@ -36,17 +36,17 @@ export const WhyPromodaddy = () => {
       desc: "Weekly updates and monthly performance reports so you always know your marketing ROI.",
     },
 
-    {
-      icon: <FaUsers />,
-      title: "Full-Service Agency",
-      desc: "SEO, Google Ads, Social Media, Website Development, PR & Branding — everything under one roof.",
-    },
+    // {
+    //   icon: <FaUsers />,
+    //   title: "Full-Service Agency",
+    //   desc: "SEO, Google Ads, Social Media, Website Development, PR & Branding — everything under one roof.",
+    // },
 
-    {
-      icon: <FaBuilding />,
-      title: "Kota Ka Apna Agency",
-      desc: "Headquartered in Kota, helping businesses across India scale with powerful digital strategies.",
-    },
+    // {
+    //   icon: <FaBuilding />,
+    //   title: "Kota Ka Apna Agency",
+    //   desc: "Headquartered in Kota, helping businesses across India scale with powerful digital strategies.",
+    // },
   ];
 
   return (
@@ -96,7 +96,7 @@ export const WhyPromodaddy = () => {
 
 
         {/* Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
 
           {points.map((item, i) => (
             <div

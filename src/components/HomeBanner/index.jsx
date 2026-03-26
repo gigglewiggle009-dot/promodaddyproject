@@ -1,87 +1,315 @@
 "use client";
+
 import BannerGif from "@/assets/banner-gif-new-one.gif";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
+import Marquee from "react-fast-marquee";
+import { X } from "lucide-react";
 import { SharedLayout } from "@/components/SharedComponent";
 
-export const HomeBanner = () => {
-  const titles = [
-    "Digital Transformation",
-    "Ecommerce Development",
-    "SEO",
-  ];
+/* COUNTER */
+const Counter = ({ target, suffix = "", decimals = 0 }) => {
+  const [count, setCount] = React.useState(0);
 
-  const [currentIndex, setCurrentIndex] = useState(0);
+  React.useEffect(() => {
+    let start = 0;
+    const duration = 2000;
+    const increment = target / (duration / 30);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % titles.length);
-    }, 2500);
+    const timer = setInterval(() => {
+      start += increment;
 
-    return () => clearInterval(interval);
-  }, []);
+      if (start >= target) {
+        start = target;
+        clearInterval(timer);
+      }
+
+      setCount(start);
+    }, 30);
+
+    return () => clearInterval(timer);
+  }, [target]);
 
   return (
-    <section className="bg-[#0b0b0b] text-white py-12 sm:py-16 md:py-20 lg:py-24 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(139,92,246,0.12),_transparent_70%)] pointer-events-none" />
+    <>
+      {decimals > 0 ? count.toFixed(decimals) : Math.floor(count)}
+      {suffix}
+    </>
+  );
+};
 
-      <SharedLayout>
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12 xl:gap-20">
-          
-          {/* LEFT */}
-          <div className="w-full max-w-[560px] mx-auto text-center lg:text-left">
-            <div className="w-full min-h-[60px] sm:min-h-[70px] md:min-h-[80px] flex items-center justify-center lg:justify-start border border-dashed border-purple-400 rounded-xl px-4 sm:px-6 mb-6 overflow-hidden">
-              <h2
-                key={currentIndex}
-                className="text-xl sm:text-2xl md:text-3xl xl:text-4xl font-semibold text-orange-500 leading-tight"
-              >
-                {titles[currentIndex]}
-              </h2>
-            </div>
+export const HomeBanner = () => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    service: "",
+    message: "",
+  });
 
-            <p className="text-gray-300 mb-6 text-sm sm:text-base md:text-lg leading-relaxed">
-              Business-impacting Problems Need Business-centric Solutions
-            </p>
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
 
-            <div className="flex items-center justify-center lg:justify-start gap-4 mb-8">
-              <div className="flex -space-x-3">
-                <img src="/images/user1.jpg" className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white" alt="" />
-                <img src="/images/user2.jpg" className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white" alt="" />
-                <img src="/images/user3.jpg" className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white" alt="" />
-                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white flex items-center justify-center text-orange-500 font-bold border-2 border-white">
-                  +
-                </div>
+  const handleWhatsAppSubmit = (e) => {
+    e.preventDefault();
+
+    const { name, phone, service, message } = formData;
+
+    const whatsappMessage = `Hello Promodaddy Digital,
+
+I want a free consultation.
+
+Name: ${name}
+Phone: ${phone}
+Service: ${service}
+Message: ${message}`;
+
+    const whatsappUrl = `https://wa.me/918690522210?text=${encodeURIComponent(
+      whatsappMessage
+    )}`;
+
+    window.open(whatsappUrl, "_blank");
+
+    setIsPopupOpen(false);
+    setFormData({
+      name: "",
+      phone: "",
+      service: "",
+      message: "",
+    });
+  };
+
+  return (
+    <>
+      <section className="bg-[#0b0b0b] text-white pt-24 pb-12 sm:pt-28 sm:pb-14 md:pt-32 md:pb-16 relative overflow-hidden">
+        {/* Background Glow */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(139,92,246,0.12),_transparent_70%)] pointer-events-none" />
+
+        <SharedLayout>
+          {/* HERO */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 xl:gap-16 mb-8">
+            {/* LEFT */}
+            <div className="w-full max-w-[620px] mx-auto lg:mx-0 text-center lg:text-left">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-semibold leading-tight mb-5">
+                Digital Marketing Agency in India Trusted by Bollywood Stars &
+                Cricketers
+              </h1>
+
+              <p className="text-gray-300 mb-6 text-sm sm:text-base md:text-lg leading-relaxed max-w-[580px] mx-auto lg:mx-0">
+                From Kota to the whole of India we deliver results-driven digital
+                marketing services that generate real leads, real revenue, and
+                scalable growth.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-5">
+                <button
+                  onClick={() => setIsPopupOpen(true)}
+                  className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-medium w-full sm:w-auto transition duration-300"
+                >
+                  Get Free Consultation
+                </button>
+
+                <a
+                  href="https://wa.me/918690522210"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border border-white/40 hover:border-green-500 text-white hover:text-green-400 px-6 py-3 rounded-lg font-medium w-full sm:w-auto transition duration-300 text-center"
+                >
+                  WhatsApp Us Now
+                </a>
               </div>
 
-              <div className="text-left">
-                <h4 className="text-orange-500 text-lg sm:text-xl font-bold">500+</h4>
-                <p className="text-gray-300 text-xs sm:text-sm">Transformations</p>
-              </div>
+              <p className="text-gray-400 text-xs sm:text-sm mb-2">
+                📍 Serving: Kota | Jaipur | Delhi | Mumbai | Pan India
+              </p>
             </div>
 
-            <div className="flex justify-center lg:justify-start">
-              <button className="bg-orange-500 hover:bg-orange-600 text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-medium transition">
-                Connect with Us
-              </button>
+            {/* RIGHT */}
+            <div className="flex justify-center lg:justify-end">
+              <div className="relative w-full max-w-[440px] md:max-w-[460px] lg:max-w-[480px]">
+                <Image
+                  src={BannerGif}
+                  alt="Banner"
+                  width={560}
+                  height={390}
+                  className="object-contain w-full"
+                  priority
+                />
+              </div>
             </div>
           </div>
 
-          {/* RIGHT */}
-          <div className="flex justify-center">
-            <div className="relative w-full max-w-[280px] sm:max-w-[360px] md:max-w-[430px] lg:max-w-[480px] xl:max-w-[560px]">
-              <Image
-                src={BannerGif}
-                alt="Animated laptop banner"
-                width={560}
-                height={390}
-                className="object-contain w-full h-auto"
-                priority
-              />
+          {/* STATS */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mb-8">
+            <div className="relative text-center px-4 py-3 lg:after:absolute lg:after:right-0 lg:after:top-1/2 lg:after:-translate-y-1/2 lg:after:h-24 lg:after:w-[3px] lg:after:bg-gradient-to-b lg:after:from-purple-500 lg:after:via-pink-500 lg:after:to-purple-500 lg:after:opacity-80">
+              <h4 className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">
+                <Counter target={5000} suffix="+" />
+              </h4>
+              <p className="text-gray-300 text-sm md:text-base">
+                Successful Projects
+              </p>
+            </div>
+
+            <div className="relative text-center px-4 py-3 lg:after:absolute lg:after:right-0 lg:after:top-1/2 lg:after:-translate-y-1/2 lg:after:h-24 lg:after:w-[3px] lg:after:bg-gradient-to-b lg:after:from-purple-500 lg:after:via-pink-500 lg:after:to-purple-500 lg:after:opacity-80">
+              <h4 className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">
+                <Counter target={1600} suffix="+" />
+              </h4>
+              <p className="text-gray-300 text-sm md:text-base">
+                Google Reviews
+              </p>
+            </div>
+
+            <div className="relative text-center px-4 py-3 lg:after:absolute lg:after:right-0 lg:after:top-1/2 lg:after:-translate-y-1/2 lg:after:h-24 lg:after:w-[3px] lg:after:bg-gradient-to-b lg:after:from-purple-500 lg:after:via-pink-500 lg:after:to-purple-500 lg:after:opacity-80">
+              <h4 className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">
+                <Counter target={5} decimals={1} />{" "}
+                <span className="text-yellow-400">⭐</span>
+              </h4>
+              <p className="text-gray-300 text-sm md:text-base">
+                Google Rating
+              </p>
+            </div>
+
+            <div className="text-center px-4 py-3">
+              <h4 className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">
+                <Counter target={12} suffix="+" />
+              </h4>
+              <p className="text-gray-300 text-sm md:text-base">
+                Years Experience
+              </p>
+            </div>
+          </div>
+        </SharedLayout>
+
+        {/* MARQUEE */}
+        <div className="border-t border-white/10 pt-5">
+          <Marquee speed={60} pauseOnHover gradient={false}>
+            {[
+              "SEO Services",
+              "Google Ads",
+              "Social Media Marketing",
+              "Meta Ads",
+              "Website Development",
+              "YouTube Marketing",
+              "Celebrity PR",
+              "Content Marketing",
+              "Local SEO",
+              "Influencer Marketing",
+            ].map((service, i) => (
+              <div
+                key={i}
+                className="group flex items-center text-xl md:text-2xl font-semibold mx-8 md:mx-10"
+              >
+                <span className="text-white group-hover:text-purple-300 transition duration-300">
+                  {service}
+                </span>
+                <span className="mx-5 md:mx-6 text-purple-500">✦</span>
+              </div>
+            ))}
+          </Marquee>
+        </div>
+      </section>
+
+      {/* POPUP FORM */}
+      {isPopupOpen && (
+        <div className="fixed inset-0 z-[999] flex items-center justify-center bg-black/70 backdrop-blur-sm px-4">
+          <div className="relative w-full max-w-2xl rounded-2xl bg-[#111111] border border-white/10 shadow-2xl overflow-hidden">
+            <button
+              onClick={() => setIsPopupOpen(false)}
+              className="absolute right-4 top-4 text-white/70 hover:text-white transition"
+            >
+              <X size={24} />
+            </button>
+
+            <div className="grid grid-cols-1 md:grid-cols-2">
+              {/* LEFT */}
+              <div className="p-6 sm:p-8">
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-orange-500 mb-3">
+                  Free Consultation
+                </p>
+
+                <h3 className="text-2xl sm:text-3xl font-bold leading-tight mb-3">
+                  Let&apos;s Build Your Brand Growth Engine
+                </h3>
+
+                <p className="text-white/70 text-sm sm:text-base mb-6 leading-relaxed">
+                  Share your details and our team will connect with you on
+                  WhatsApp with the right digital marketing plan.
+                </p>
+
+                <form onSubmit={handleWhatsAppSubmit} className="space-y-4">
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Your Name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    className="w-full rounded-lg border border-white/15 bg-white/5 px-4 py-3 text-white placeholder:text-white/40 outline-none focus:border-orange-500"
+                  />
+
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Phone Number"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    required
+                    className="w-full rounded-lg border border-white/15 bg-white/5 px-4 py-3 text-white placeholder:text-white/40 outline-none focus:border-orange-500"
+                  />
+
+                  <input
+                    type="text"
+                    name="service"
+                    placeholder="Service Needed"
+                    value={formData.service}
+                    onChange={handleChange}
+                    required
+                    className="w-full rounded-lg border border-white/15 bg-white/5 px-4 py-3 text-white placeholder:text-white/40 outline-none focus:border-orange-500"
+                  />
+
+                  <textarea
+                    name="message"
+                    placeholder="Your Message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    rows={4}
+                    className="w-full rounded-lg border border-white/15 bg-white/5 px-4 py-3 text-white placeholder:text-white/40 outline-none focus:border-orange-500 resize-none"
+                  />
+
+                  <button
+                    type="submit"
+                    className="w-full rounded-lg bg-orange-500 px-6 py-3 font-semibold text-white transition hover:bg-orange-600"
+                  >
+                    Submit on WhatsApp
+                  </button>
+                </form>
+              </div>
+
+              {/* RIGHT */}
+              <div className="hidden md:flex items-center justify-center bg-[#0c0c0c] p-6">
+                <div className="w-full max-w-xs rounded-2xl border border-white/10 bg-gradient-to-b from-orange-500/10 to-purple-500/10 p-6">
+                  <h4 className="text-xl font-semibold mb-4">
+                    Why choose us?
+                  </h4>
+
+                  <ul className="space-y-3 text-sm text-white/80">
+                    <li>✓ 500+ businesses served</li>
+                    <li>✓ Bollywood & cricketer trusted</li>
+                    <li>✓ SEO, Ads, Social & Branding</li>
+                    <li>✓ Fast WhatsApp response</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </SharedLayout>
-    </section>
+      )}
+    </>
   );
 };
 

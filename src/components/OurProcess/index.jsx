@@ -8,31 +8,31 @@ const processSteps = [
     number: "01",
     title: "Free Consultation",
     description:
-      "Aap call/WhatsApp karo — hum aapka business samjhenge. Zero cost, zero obligation.",
+      "We understand your business goals and current challenges.",
   },
   {
     number: "02",
     title: "Custom Strategy",
     description:
-      "Aapke goals, budget aur competition ke hisaab se tailored plan banate hain.",
+      "We build a tailored plan based on your budget and competition.",
   },
   {
     number: "03",
     title: "Execution",
     description:
-      "Campaign launch — ads, SEO, content, social media — sab ek saath.",
+      "We launch multi-channel campaigns across SEO, Ads, and Social Media.",
   },
   {
     number: "04",
     title: "Weekly Updates",
     description:
-      "Aap hamesha jante ho kya ho raha hai — no surprises, full transparency.",
+      "Full transparency—no surprises, just data-backed progress.",
   },
   {
     number: "05",
     title: "Growth & Scale",
     description:
-      "Jo kaam karta hai use scale karo — consistent compounding growth.",
+      "We double down on what works to ensure consistent compounding growth.",
   },
 ];
 
