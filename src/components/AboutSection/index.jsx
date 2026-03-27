@@ -68,54 +68,54 @@ export const AboutSection = () => {
           </p>
 
           {/* STATS */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-6">
+<div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-6">
 
-            {/* Projects */}
-            <div>
-              <div className="w-16 h-[2px] bg-gradient-to-r from-purple-500 to-pink-500 mb-4"></div>
-              <h4 className="text-3xl font-bold text-purple-400">
-                <Counter target={5000} suffix="+" />
-              </h4>
-              <p className="text-gray-400 text-sm mt-1">
-                Successful Projects
-              </p>
-            </div>
+  {/* Projects */}
+  <div>
+    <div className="w-16 h-[2px] bg-gradient-to-r from-purple-500 to-pink-500 mb-4"></div>
+    <p className="text-3xl font-bold text-purple-400">
+      <Counter target={5000} suffix="+" />
+    </p>
+    <p className="text-gray-400 text-sm mt-1">
+      Successful Projects
+    </p>
+  </div>
 
-            {/* Reviews */}
-            <div>
-              <div className="w-16 h-[2px] bg-gradient-to-r from-purple-500 to-pink-500 mb-4"></div>
-              <h4 className="text-3xl font-bold text-purple-400">
-                <Counter target={1600} suffix="+" />
-              </h4>
-              <p className="text-gray-400 text-sm mt-1">
-                Google Reviews
-              </p>
-            </div>
+  {/* Reviews */}
+  <div>
+    <div className="w-16 h-[2px] bg-gradient-to-r from-purple-500 to-pink-500 mb-4"></div>
+    <p className="text-3xl font-bold text-purple-400">
+      <Counter target={1600} suffix="+" />
+    </p>
+    <p className="text-gray-400 text-sm mt-1">
+      Google Reviews
+    </p>
+  </div>
 
-            {/* Rating */}
-            <div>
-              <div className="w-16 h-[2px] bg-gradient-to-r from-purple-500 to-pink-500 mb-4"></div>
-              <h4 className="text-3xl font-bold text-purple-400 flex items-center gap-2">
-                <Counter target={5} decimals={1} />
-                <span className="text-yellow-400">⭐</span>
-              </h4>
-              <p className="text-gray-400 text-sm mt-1">
-                Google Rating
-              </p>
-            </div>
+  {/* Rating */}
+  <div>
+    <div className="w-16 h-[2px] bg-gradient-to-r from-purple-500 to-pink-500 mb-4"></div>
+    <p className="text-3xl font-bold text-purple-400 flex items-center gap-2">
+      <Counter target={5} decimals={1} />
+      <span className="text-yellow-400">⭐</span>
+    </p>
+    <p className="text-gray-400 text-sm mt-1">
+      Google Rating
+    </p>
+  </div>
 
-            {/* Experience */}
-            <div>
-              <div className="w-16 h-[2px] bg-gradient-to-r from-purple-500 to-pink-500 mb-4"></div>
-              <h4 className="text-3xl font-bold text-purple-400">
-                <Counter target={12} suffix="+" />
-              </h4>
-              <p className="text-gray-400 text-sm mt-1">
-                Years Experience
-              </p>
-            </div>
+  {/* Experience */}
+  <div>
+    <div className="w-16 h-[2px] bg-gradient-to-r from-purple-500 to-pink-500 mb-4"></div>
+    <p className="text-3xl font-bold text-purple-400">
+      <Counter target={12} suffix="+" />
+    </p>
+    <p className="text-gray-400 text-sm mt-1">
+      Years Experience
+    </p>
+  </div>
 
-          </div>
+</div>
 
         </div>
 

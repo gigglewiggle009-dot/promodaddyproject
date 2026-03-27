@@ -154,43 +154,54 @@ Message: ${message}`;
 
           {/* STATS */}
 <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-0 mb-8 mt-2">
+
   <div className="relative text-center rounded-xl border border-white/10 bg-white/[0.03] px-3 py-5 sm:px-4 sm:py-6 lg:rounded-none lg:border-0 lg:bg-transparent lg:px-4 lg:py-3 lg:after:absolute lg:after:right-0 lg:after:top-1/2 lg:after:-translate-y-1/2 lg:after:h-24 lg:after:w-[3px] lg:after:bg-gradient-to-b lg:after:from-purple-500 lg:after:via-pink-500 lg:after:to-purple-500 lg:after:opacity-80">
-    <h4 className="text-2xl sm:text-3xl md:text-4xl font-bold text-purple-400 mb-1 sm:mb-2">
+    
+    <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-purple-400 mb-1 sm:mb-2">
       <Counter target={5000} suffix="+" />
-    </h4>
+    </p>
+
     <p className="text-gray-300 text-xs sm:text-sm md:text-base leading-snug">
       Successful Projects
     </p>
   </div>
 
   <div className="relative text-center rounded-xl border border-white/10 bg-white/[0.03] px-3 py-5 sm:px-4 sm:py-6 lg:rounded-none lg:border-0 lg:bg-transparent lg:px-4 lg:py-3 lg:after:absolute lg:after:right-0 lg:after:top-1/2 lg:after:-translate-y-1/2 lg:after:h-24 lg:after:w-[3px] lg:after:bg-gradient-to-b lg:after:from-purple-500 lg:after:via-pink-500 lg:after:to-purple-500 lg:after:opacity-80">
-    <h4 className="text-2xl sm:text-3xl md:text-4xl font-bold text-purple-400 mb-1 sm:mb-2">
+    
+    <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-purple-400 mb-1 sm:mb-2">
       <Counter target={1600} suffix="+" />
-    </h4>
+    </p>
+
     <p className="text-gray-300 text-xs sm:text-sm md:text-base leading-snug">
       Google Reviews
     </p>
   </div>
 
   <div className="relative text-center rounded-xl border border-white/10 bg-white/[0.03] px-3 py-5 sm:px-4 sm:py-6 lg:rounded-none lg:border-0 lg:bg-transparent lg:px-4 lg:py-3 lg:after:absolute lg:after:right-0 lg:after:top-1/2 lg:after:-translate-y-1/2 lg:after:h-24 lg:after:w-[3px] lg:after:bg-gradient-to-b lg:after:from-purple-500 lg:after:via-pink-500 lg:after:to-purple-500 lg:after:opacity-80">
-    <h4 className="text-2xl sm:text-3xl md:text-4xl font-bold text-purple-400 mb-1 sm:mb-2 flex items-center justify-center gap-1">
+    
+    <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-purple-400 mb-1 sm:mb-2 flex items-center justify-center gap-1">
       <Counter target={5} decimals={1} />
       <span className="text-yellow-400 text-xl sm:text-2xl">⭐</span>
-    </h4>
+    </p>
+
     <p className="text-gray-300 text-xs sm:text-sm md:text-base leading-snug">
       Google Rating
     </p>
   </div>
 
   <div className="text-center rounded-xl border border-white/10 bg-white/[0.03] px-3 py-5 sm:px-4 sm:py-6 lg:rounded-none lg:border-0 lg:bg-transparent lg:px-4 lg:py-3">
-    <h4 className="text-2xl sm:text-3xl md:text-4xl font-bold text-purple-400 mb-1 sm:mb-2">
+    
+    <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-purple-400 mb-1 sm:mb-2">
       <Counter target={12} suffix="+" />
-    </h4>
+    </p>
+
     <p className="text-gray-300 text-xs sm:text-sm md:text-base leading-snug">
       Years Experience
     </p>
   </div>
+
 </div>
+
         </SharedLayout>
 
         {/* MARQUEE */}
