@@ -31,12 +31,88 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        {/* Extra Meta Tags */}
+        <meta httpEquiv="cache-control" content="no-cache" />
+        <meta httpEquiv="pragma" content="no-cache" />
+        <meta httpEquiv="Expires" content="-1" />
 
-    <meta name="geo.region" content="IN" />
-    <meta name="geo.placename" content="Promodaddy Digital" />
-    <meta name="geo.position" content="25.1383032,75.8316644" />
-    <meta name="ICBM" content="25.1383032,75.8316644" />
-    
+        <meta
+          name="robots"
+          content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+        />
+        <meta
+          name="googlebot"
+          content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+        />
+        <meta
+          name="bingbot"
+          content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+        />
+        <meta
+          name="yahoobot"
+          content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+        />
+        <meta
+          name="msnbot"
+          content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+        />
+        <meta name="allow-search" content="yes" />
+        <meta name="distribution" content="global" />
+        <meta name="revisit-after" content="3 days" />
+        <meta
+          name="copyright"
+          content="Copyright 2022 www.promodaddy.in"
+        />
+        <meta name="publisher" content="Promodaddy Digital" />
+        <meta name="document-state" content="Dynamic" />
+        <meta name="document-type" content="Public" />
+        <meta name="author" content="Promodaddy Digital Kota, India" />
+        <meta name="rating" content="safe for kids" />
+        <meta name="reply-to" content="promodaddydigital@gmail.com" />
+
+        {/* Geo Meta Tags */}
+        <meta name="geo.region" content="IN" />
+        <meta name="State" content="Rajasthan" />
+        <meta name="City" content="Kota" />
+        <meta name="geo.placename" content="Promodaddy Digital" />
+        <meta name="geo.position" content="25.1383032,75.8316644" />
+        <meta name="ICBM" content="25.1383032,75.8316644" />
+
+        {/* Open Graph Meta Tags */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.promodaddy.in/" />
+        <meta
+          property="og:title"
+          content="Promodaddy Digital – Digital Marketing Agency in India"
+        />
+        <meta
+          property="og:description"
+          content="Promodaddy Digital is a trusted digital marketing agency in India offering SEO, Google Ads, and social media marketing services. 160+ happy clients."
+        />
+        <meta
+          property="og:image"
+          content="https://www.promodaddy.in/images/promodaddy-digital.jpg"
+        />
+        <meta property="og:site_name" content="Promodaddy Digital" />
+        <meta property="og:locale" content="en_IN" />
+
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://www.promodaddy.in/" />
+        <meta
+          name="twitter:title"
+          content="Promodaddy Digital – Digital Marketing Agency in India"
+        />
+        <meta
+          name="twitter:description"
+          content="Top-rated digital marketing agency in India offering SEO, Google Ads & social media marketing. 160+ happy clients. Free consultation."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.promodaddy.in/images/promodaddy-digital.jpg"
+        />
+        <meta name="twitter:site" content="@promodaddydigital" />
+
         {/* Organization Schema */}
         <script
           type="application/ld+json"
