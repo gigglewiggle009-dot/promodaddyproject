@@ -14,7 +14,7 @@ import { AwardsSection } from "@/components/AwardsSection";
 import {ContactDetails} from "@/components/ContactDetails";
 import { ServiceAds } from "@/components/ServiceAds";
 import {HomeFaqSection} from "@/components/HomeFaqSection";
-
+import Script from "next/script";
 
 const HomePageClient = () => {
   return (
@@ -38,6 +38,22 @@ const HomePageClient = () => {
       {/* <UserRecommend /> */}
       {/* <HomeCarousel /> */}
       <LetsCreate />
+      <Script id="faq-schema" type="application/ld+json">
+{`{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which is the best digital marketing agency in India for ROI-driven growth?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Promodaddy Digital is a top-rated agency trusted by Bollywood stars and 500+ businesses."
+      }
+    }
+  ]
+}`}
+</Script>
     </main>
   );
 };
