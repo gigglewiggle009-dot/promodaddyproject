@@ -1,5 +1,3 @@
-"use client";
-
 import { logo } from "@/assets";
 import { GoArrowUpRight } from "react-icons/go";
 import {

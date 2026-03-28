@@ -67,10 +67,7 @@ function page() {
                     <a href="mailto:promodaddydigital@gmail.com" className="block text-gray-300 hover:text-white">
                       promodaddydigital@gmail.com
                     </a>
-                    <a className="flex items-center gap-x-2 mt-2" href="mailto:info@promodaddy.in">
-                    <MdOutlineMailOutline className="text-xl" />
-                    <span>info@promodaddy.in</span>
-                    </a>
+                    
                   </div>
                 </div>
               </div>
