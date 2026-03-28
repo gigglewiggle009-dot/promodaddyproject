@@ -42,7 +42,7 @@ export const Achievements = () => {
     },
     {
       icon: <FaStar />,
-      title: "160+ Five-Star Reviews",
+      title: "1600+ Five-Star Reviews",
       desc: "Maintaining a strong 5.0 rating on Google Maps with consistent client satisfaction.",
     },
     {
@@ -57,7 +57,7 @@ export const Achievements = () => {
     },
     {
       icon: <FaRocket />,
-      title: "500+ Projects Delivered",
+      title: "5000+ Projects Delivered",
       desc: "Successful digital campaigns, websites, performance ads and branding projects.",
     },
   ];

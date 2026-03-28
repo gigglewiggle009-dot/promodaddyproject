@@ -4,6 +4,8 @@ import { AboutSectionKota } from "@/components/KotaNew/AboutSectionKota";
 import { CitySectionKota } from "@/components/KotaNew/CitySectionKota";
 import { IndustriesSectionKota } from "@/components/KotaNew/IndustriesSectionKota";
 import { ServicesSectionKota } from "@/components/KotaNew/ServicesSectionKota";
+import { OurProcessSectionKota } from "@/components/KotaNew/OurProcessSectionKota";
+import {WhyChooseUsSectionKota} from "@/components/KotaNew/WhyChooseUsSectionKota"
 import { FaqSectionKota } from "@/components/KotaNew/FaqSectionKota";
 // import { ContactDetailsKota } from "@/components/ContactDetailsKota";
 
@@ -25,6 +27,8 @@ export default function KotaNewPage() {
       <CitySectionKota />
       <IndustriesSectionKota />
       <ServicesSectionKota />
+      <OurProcessSectionKota />
+      <WhyChooseUsSectionKota />
       <FaqSectionKota />
       {/* <ContactDetailsKota /> */}
     </main>
