@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import React, { useState } from "react";
 import { SharedLayout } from "@/components/SharedComponent";
 
@@ -91,22 +91,18 @@ Message: ${formData.message}`;
               just traffic. Local team. Proven results. No lock-in contracts.
             </p>
 
-            <button
-              type="button"
-              onClick={() => {
-                document
-                  .getElementById("hero-quote-form")
-                  ?.scrollIntoView({ behavior: "smooth", block: "center" });
-              }}
-              className="px-6 sm:px-8 py-2.5 sm:py-3 rounded-md font-medium text-white 
-  bg-gradient-to-r from-purple-500 to-indigo-600 
-  hover:from-purple-600 hover:to-indigo-700 
-  transition-all duration-300 
-  shadow-lg shadow-purple-500/20 
-  hover:shadow-purple-500/40"
-            >
-              Get Your FREE Audit Today →
-            </button>
+            <Link href="/contact">
+  <button
+    className="px-6 sm:px-8 py-2.5 sm:py-3 rounded-md font-medium text-white 
+    bg-gradient-to-r from-purple-500 to-indigo-600 
+    hover:from-purple-600 hover:to-indigo-700 
+    transition-all duration-300 
+    shadow-lg shadow-purple-500/20 
+    hover:shadow-purple-500/40"
+  >
+    Get Your FREE Audit Today →
+  </button>
+</Link>
           </div>
 
           {/* RIGHT FORM */}
