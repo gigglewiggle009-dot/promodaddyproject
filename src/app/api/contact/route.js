@@ -4,9 +4,9 @@ export async function POST(req) {
 
     console.log("Contact form data received:", body);
 
-    const { name, phone, email, service, message } = body;
+    const { name, phone, email, message } = body;
 
-    if (!name || !phone || !email || !service) {
+    if (!name || !phone || !email || !message) {
       return Response.json(
         {
           success: false,
@@ -24,7 +24,6 @@ export async function POST(req) {
           name,
           phone,
           email,
-          service,
           message,
         },
       },

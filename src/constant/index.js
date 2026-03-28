@@ -260,6 +260,7 @@ export const navTitle = [
     name: "Clients",
     link: "/clients",
   },
+ 
   {
     name: "Blog",
     link: "/blog",
