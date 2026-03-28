@@ -125,7 +125,7 @@ export const CelebrityClients = () => {
               />
 
               <div className="bg-[#111] p-4 text-left">
-                <h3 className="text-lg font-semibold">{celeb.name}</h3>
+                <p className="text-lg font-semibold">{celeb.name}</p>
                 <p className="text-gray-400 text-sm">{celeb.role}</p>
                 <p className="text-purple-400 text-xs mt-1 font-semibold uppercase">
                   {celeb.achievement}
@@ -133,9 +133,9 @@ export const CelebrityClients = () => {
               </div>
 
               <div className="absolute inset-0 bg-black/95 opacity-0 group-hover:opacity-100 transition duration-300 p-6 flex flex-col justify-center">
-                <h3 className="text-xl font-bold text-purple-400 mb-2">
+                <p className="text-xl font-bold text-purple-400 mb-2">
                   {celeb.name}
-                </h3>
+                </p>
 
                 <p className="text-gray-400 text-sm mb-3">{celeb.role}</p>
 
