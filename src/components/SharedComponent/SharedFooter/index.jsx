@@ -26,7 +26,7 @@ export const SharedFooter = () => {
       <div className="w-11/12 px-2 py-10 mx-auto">
         <div className="flex flex-col lg:flex-row gap-7">
           <div className="lg:w-[30%]">
-            <h1 className="text-3xl font-bold">PromoDaddy Digital</h1>
+           <p className="text-3xl font-bold">PromoDaddy Digital</p>
 
             <div>
               <div className="w-[80px] h-[80px] mt-8">

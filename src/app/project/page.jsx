@@ -15,6 +15,10 @@ export const metadata = {
 function page() {
   return (
     <>
+
+    <section className="sr-only">
+      <h1>Digital Marketing Projects | PromoDaddy Digital</h1>
+    </section>
       {/* Banner */}
       <SmallBanner
         sectionsName="Project"

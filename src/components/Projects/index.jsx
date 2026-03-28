@@ -51,7 +51,7 @@ export const Project = () => {
     return (
         <div className='overflow-hidden text-white bg-primaryBlack'>
             <div className='w-11/12 mx-auto'>
-                <h1 className='mt-5 text-6xl font-extrabold text-center text-primaryBlue'>Youtube Promotion</h1>
+                <h2 className='mt-5 text-6xl font-extrabold text-center text-primaryBlue'>Youtube Promotion</h2>
                 <div className='grid gap-10 mt-16 md:grid-cols-2 bg-primaryBlack'>
                     {videosData.map((video, index) => (
                         <div
@@ -61,7 +61,7 @@ export const Project = () => {
                             // onMouseLeave={handleVideoLeave}
                         >
                             <VideoBg className="absolute top-0 left-0 w-fit h-[120%] z-2" />
-                            <h1 className='mb-3 text-5xl text-center'>{video.title}</h1>
+                            <h3 className='mb-3 text-5xl text-center'>{video.title}</h3>
                             <a href={video.src} target="_blank" rel="noopener noreferrer">
                                 <video
                                     className='object-cover w-fit h-fit rounded-[32px] border z-10 relative border-[#5D4D6D]'
