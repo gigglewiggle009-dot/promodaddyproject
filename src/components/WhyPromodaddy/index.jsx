@@ -72,7 +72,7 @@ export const WhyPromodaddy = () => {
         </div>
 
         {/* Hidden semantic subheading */}
-        <h3 className="sr-only">Trust Signals and Key Advantages</h3>
+        {/* <h3 className="sr-only">Trust Signals and Key Advantages</h3> */}
 
         {/* TRUST STATS */}
         <ul className="grid grid-cols-2 md:grid-cols-4 gap-10 text-center mb-20 list-none p-0 m-0">
@@ -107,7 +107,7 @@ export const WhyPromodaddy = () => {
                 </div>
 
                 {/* Title */}
-                <h4 className="text-xl font-semibold mb-3">{item.title}</h4>
+                <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
 
                 {/* Description */}
                 <p className="text-gray-400 text-sm leading-relaxed">

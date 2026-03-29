@@ -286,7 +286,7 @@ export const navTitle = [
 
 export const footerTitle = {
   linkOne: {
-    title: "Links",
+    title: "Quick Links",
     content: [
       {
         name: "Home",
@@ -319,7 +319,7 @@ export const footerTitle = {
     ],
   },
   linkTwo: {
-    title: "Links",
+    title: "Useful Links",
     content: [
      
       {
@@ -327,11 +327,11 @@ export const footerTitle = {
         link: "/privacy-policy",
       },
       {
-        name: "terms&conditions",
+        name: "Terms & Conditions",
         link: "/terms-and-conditions",
       },
       {
-        name: "Refunds",
+        name: "Refund Policy",
         link: "/refund-policy",
       },
       {

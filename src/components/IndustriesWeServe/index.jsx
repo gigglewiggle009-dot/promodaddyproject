@@ -85,7 +85,7 @@ export const IndustriesWeServe = () => {
         </p>
 
         {/* Hidden semantic subheading */}
-        <h3 className="sr-only">Industries We Serve</h3>
+        {/* <h3 className="sr-only">Industries We Serve</h3> */}
 
         {/* DESKTOP ORBIT */}
         <div className="hidden md:flex justify-center">
@@ -142,7 +142,7 @@ export const IndustriesWeServe = () => {
                         <Icon aria-hidden="true" focusable="false" />
                       </div>
 
-                      <h4 className="text-sm font-semibold">{item.title}</h4>
+                      <h3 className="text-sm font-semibold">{item.title}</h3>
 
                       <p className="text-gray-400 text-xs mt-1">{item.desc}</p>
                     </article>
@@ -165,7 +165,7 @@ export const IndustriesWeServe = () => {
                     <Icon aria-hidden="true" focusable="false" />
                   </div>
 
-                  <h4 className="text-sm font-semibold">{item.title}</h4>
+                  <h3 className="text-sm font-semibold">{item.title}</h3>
 
                   <p className="text-gray-400 text-xs mt-1">{item.desc}</p>
                 </article>

@@ -87,7 +87,7 @@ export default function RootLayout({ children }) {
         />
         <meta
           property="og:description"
-          content="Promodaddy Digital is a trusted digital marketing agency in India offering SEO, Google Ads, and social media marketing services. 160+ happy clients."
+          content="Promodaddy Digital is a trusted digital marketing agency in India offering SEO, Google Ads, and social media marketing services. 500+ happy clients."
         />
         <meta
           property="og:image"

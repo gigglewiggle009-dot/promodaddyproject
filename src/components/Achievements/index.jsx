@@ -142,7 +142,7 @@ export const Achievements = () => {
         </div>
 
         {/* Hidden semantic subheading for structure */}
-        <h3 className="sr-only">Performance Highlights</h3>
+        {/* <h3 className="sr-only">Performance Highlights</h3> */}
 
         {/* Stats */}
         <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-8 mb-24">
