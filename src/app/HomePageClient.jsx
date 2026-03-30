@@ -19,8 +19,9 @@ import {
 import { AwardsSection } from "@/components/AwardsSection";
 import { ContactDetails } from "@/components/ContactDetails";
 import { ServiceAds } from "@/components/ServiceAds";
-import { HomeFaqSection } from "@/components/HomeFaqSection";
 import { HomeTestimonials } from "@/components/HomeTestimonials";
+import { HomeFaqSection } from "@/components/HomeFaqSection";
+
 
 import Script from "next/script";
 
@@ -98,8 +99,8 @@ const HomePageClient = () => {
       <AwardsSection />
       <OurProcess />
       {/* <Services /> */}
-      <HomeFaqSection />
       <HomeTestimonials/>
+      <HomeFaqSection />
       {/* <Clients /> */}
       {/* <ContactDetails /> */}
       {/* <UserRecommend /> */}
