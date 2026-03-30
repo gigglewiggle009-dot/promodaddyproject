@@ -211,37 +211,54 @@ const TestimonialCard = ({ item }) => {
 };
 
 export const HomeTestimonials = () => {
-  const mobileScrollRef = useRef(null);
+  const scrollRef = useRef(null);
   const [hovered, setHovered] = useState(false);
 
-  const getScrollAmount = () => {
-    if (!mobileScrollRef.current) return 320;
+  const getDesktopPageAmount = () => {
+    if (!scrollRef.current) return 0;
+    return scrollRef.current.clientWidth;
+  };
 
-    const firstCard = mobileScrollRef.current.querySelector("[data-mobile-card]");
+  const getCardAmount = () => {
+    if (!scrollRef.current) return 320;
+
+    const firstCard = scrollRef.current.querySelector("[data-testimonial-card]");
     if (!firstCard) return 320;
 
     const cardWidth = firstCard.offsetWidth;
-    const styles = window.getComputedStyle(mobileScrollRef.current);
-    const gap = parseInt(styles.gap || "0", 10);
+    const styles = window.getComputedStyle(scrollRef.current);
+    const gap = parseInt(styles.gap || styles.columnGap || "0", 10);
 
     return cardWidth + gap;
   };
 
+  const getScrollAmount = () => {
+    if (typeof window === "undefined") return 320;
+
+    // Desktop: move one full visible page
+    if (window.innerWidth >= 1280) {
+      return getDesktopPageAmount();
+    }
+
+    // Mobile/tablet: move one card
+    return getCardAmount();
+  };
+
   useEffect(() => {
     const interval = setInterval(() => {
-      if (!hovered && mobileScrollRef.current && window.innerWidth < 1280) {
+      if (!hovered && scrollRef.current) {
         const amount = getScrollAmount();
 
         if (
-          mobileScrollRef.current.scrollLeft + mobileScrollRef.current.clientWidth >=
-          mobileScrollRef.current.scrollWidth - amount
+          scrollRef.current.scrollLeft + scrollRef.current.clientWidth >=
+          scrollRef.current.scrollWidth - amount
         ) {
-          mobileScrollRef.current.scrollTo({
+          scrollRef.current.scrollTo({
             left: 0,
             behavior: "smooth",
           });
         } else {
-          mobileScrollRef.current.scrollBy({
+          scrollRef.current.scrollBy({
             left: amount,
             behavior: "smooth",
           });
@@ -253,14 +270,14 @@ export const HomeTestimonials = () => {
   }, [hovered]);
 
   const scroll = (dir) => {
-    if (mobileScrollRef.current) {
-      const amount = getScrollAmount();
+    if (!scrollRef.current) return;
 
-      mobileScrollRef.current.scrollBy({
-        left: dir === "left" ? -amount : amount,
-        behavior: "smooth",
-      });
-    }
+    const amount = getScrollAmount();
+
+    scrollRef.current.scrollBy({
+      left: dir === "left" ? -amount : amount,
+      behavior: "smooth",
+    });
   };
 
   return (
@@ -283,12 +300,11 @@ export const HomeTestimonials = () => {
             </p>
           </div>
 
-          {/* Mobile / tablet arrows */}
-          <div className="mb-5 flex items-center justify-end gap-3 xl:hidden">
+          <div className="mb-5 flex items-center justify-end gap-3">
             <button
               type="button"
               onClick={() => scroll("left")}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-[#111] text-white transition hover:bg-[#1a1a1a]"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-[#111] text-white transition hover:bg-[#1a1a1a] sm:h-11 sm:w-11"
               aria-label="Scroll left"
             >
               <ChevronLeft size={18} />
@@ -297,35 +313,25 @@ export const HomeTestimonials = () => {
             <button
               type="button"
               onClick={() => scroll("right")}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-[#111] text-white transition hover:bg-[#1a1a1a]"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-[#111] text-white transition hover:bg-[#1a1a1a] sm:h-11 sm:w-11"
               aria-label="Scroll right"
             >
               <ChevronRight size={18} />
             </button>
           </div>
 
-          {/* Mobile / tablet slider */}
           <div
-            ref={mobileScrollRef}
+            ref={scrollRef}
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
-            className="no-scrollbar flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4 xl:hidden"
+            className="no-scrollbar flex gap-4 overflow-x-auto scroll-smooth pb-4 sm:gap-5"
           >
             {testimonials.map((item) => (
               <div
                 key={item.id}
-                data-mobile-card
-                className="min-w-[85%] max-w-[85%] shrink-0 snap-start sm:min-w-[320px] sm:max-w-[320px]"
+                data-testimonial-card
+                className="min-w-[85%] max-w-[85%] shrink-0 sm:min-w-[320px] sm:max-w-[320px] xl:min-w-[calc((100%-60px)/4)] xl:max-w-[calc((100%-60px)/4)]"
               >
-                <TestimonialCard item={item} />
-              </div>
-            ))}
-          </div>
-
-          {/* Desktop grid */}
-          <div className="hidden grid-cols-4 gap-5 xl:grid">
-            {testimonials.slice(0, 4).map((item) => (
-              <div key={item.id}>
                 <TestimonialCard item={item} />
               </div>
             ))}
