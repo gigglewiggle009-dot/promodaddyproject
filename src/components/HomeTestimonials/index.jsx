@@ -292,11 +292,11 @@ export const HomeTestimonials = () => {
             </p>
 
             <h2 className="mt-4 text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl">
-              Our success, echoed by our clients
+              Real Results, Trusted by Our Clients
             </h2>
 
             <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-white/60 sm:text-base">
-              Real feedback that reflects the quality and impact of our work.
+              Real feedback from businesses we’ve helped grow online.
             </p>
           </div>
 
