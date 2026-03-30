@@ -135,7 +135,6 @@ const GoogleBadge = ({ link }) => {
       rel="noopener noreferrer"
       aria-label="Open this review on Google"
       className="flex h-9 w-9 items-center justify-center rounded-full bg-white/[0.06] text-base font-bold transition hover:bg-white/[0.12]"
-      onClick={(e) => e.stopPropagation()}
     >
       <span className="bg-gradient-to-r from-blue-500 via-red-500 via-yellow-400 to-green-500 bg-clip-text text-transparent">
         G
@@ -148,11 +147,11 @@ const TestimonialCard = ({ item }) => {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <div className="h-full rounded-2xl border border-white/10 bg-[#111] p-4 sm:p-5 font-sans transition hover:-translate-y-1 hover:border-white/20">
+    <div className="h-full rounded-2xl border border-white/10 bg-[#111] p-4 font-sans transition hover:-translate-y-1 hover:border-white/20 sm:p-5">
       <div className="mb-4 flex items-start justify-between gap-3">
         <div className="flex min-w-0 gap-3">
           <div
-            className={`flex h-10 w-10 sm:h-11 sm:w-11 shrink-0 items-center justify-center rounded-full text-sm sm:text-base font-semibold text-white ${item.initialBg}`}
+            className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-semibold text-white sm:h-11 sm:w-11 sm:text-base ${item.initialBg}`}
           >
             {item.initial}
           </div>
@@ -212,26 +211,38 @@ const TestimonialCard = ({ item }) => {
 };
 
 export const HomeTestimonials = () => {
-  const scrollRef = useRef(null);
+  const mobileScrollRef = useRef(null);
   const [hovered, setHovered] = useState(false);
+
+  const getScrollAmount = () => {
+    if (!mobileScrollRef.current) return 320;
+
+    const firstCard = mobileScrollRef.current.querySelector("[data-mobile-card]");
+    if (!firstCard) return 320;
+
+    const cardWidth = firstCard.offsetWidth;
+    const styles = window.getComputedStyle(mobileScrollRef.current);
+    const gap = parseInt(styles.gap || "0", 10);
+
+    return cardWidth + gap;
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if (!hovered && scrollRef.current) {
-        const isMobile = window.innerWidth < 640;
-        const width = isMobile ? 285 : 320;
-
-        scrollRef.current.scrollBy({
-          left: width,
-          behavior: "smooth",
-        });
+      if (!hovered && mobileScrollRef.current && window.innerWidth < 1280) {
+        const amount = getScrollAmount();
 
         if (
-          scrollRef.current.scrollLeft + scrollRef.current.clientWidth >=
-          scrollRef.current.scrollWidth - 10
+          mobileScrollRef.current.scrollLeft + mobileScrollRef.current.clientWidth >=
+          mobileScrollRef.current.scrollWidth - amount
         ) {
-          scrollRef.current.scrollTo({
+          mobileScrollRef.current.scrollTo({
             left: 0,
+            behavior: "smooth",
+          });
+        } else {
+          mobileScrollRef.current.scrollBy({
+            left: amount,
             behavior: "smooth",
           });
         }
@@ -242,40 +253,38 @@ export const HomeTestimonials = () => {
   }, [hovered]);
 
   const scroll = (dir) => {
-    if (scrollRef.current) {
-      const isMobile = window.innerWidth < 640;
-      const width = isMobile ? 285 : 320;
+    if (mobileScrollRef.current) {
+      const amount = getScrollAmount();
 
-      scrollRef.current.scrollBy({
-        left: dir === "left" ? -width : width,
+      mobileScrollRef.current.scrollBy({
+        left: dir === "left" ? -amount : amount,
         behavior: "smooth",
       });
     }
   };
 
   return (
-    <section className="relative bg-black py-16 sm:py-20 font-sans overflow-hidden">
+    <section className="relative bg-black py-16 font-sans sm:py-20">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(99,102,241,0.12),_transparent_70%)]" />
 
       <SharedLayout>
         <div className="relative">
-          {/* HEADER */}
-          <div className="mb-10 sm:mb-14 text-center">
+          <div className="mb-10 text-center sm:mb-14">
             <p className="text-xs uppercase tracking-[0.3em] text-white/60">
               Testimonials
             </p>
 
-            <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
+            <h2 className="mt-4 text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl">
               Our success, echoed by our clients
             </h2>
 
-            <p className="mx-auto mt-4 max-w-2xl text-sm sm:text-base text-white/60 leading-7">
+            <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-white/60 sm:text-base">
               Real feedback that reflects the quality and impact of our work.
             </p>
           </div>
 
-          {/* MOBILE ARROWS */}
-          <div className="mb-5 flex items-center justify-end gap-3 lg:hidden">
+          {/* Mobile / tablet arrows */}
+          <div className="mb-5 flex items-center justify-end gap-3 xl:hidden">
             <button
               type="button"
               onClick={() => scroll("left")}
@@ -295,43 +304,31 @@ export const HomeTestimonials = () => {
             </button>
           </div>
 
-          {/* SLIDER */}
-          <div className="relative">
-            {/* LEFT DESKTOP */}
-            <button
-              type="button"
-              onClick={() => scroll("left")}
-              className="absolute left-0 top-1/2 z-10 hidden h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/10 bg-[#111] text-white transition hover:bg-[#1a1a1a] lg:flex"
-              aria-label="Scroll left"
-            >
-              <ChevronLeft />
-            </button>
+          {/* Mobile / tablet slider */}
+          <div
+            ref={mobileScrollRef}
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+            className="no-scrollbar flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4 xl:hidden"
+          >
+            {testimonials.map((item) => (
+              <div
+                key={item.id}
+                data-mobile-card
+                className="min-w-[85%] max-w-[85%] shrink-0 snap-start sm:min-w-[320px] sm:max-w-[320px]"
+              >
+                <TestimonialCard item={item} />
+              </div>
+            ))}
+          </div>
 
-            {/* RIGHT DESKTOP */}
-            <button
-              type="button"
-              onClick={() => scroll("right")}
-              className="absolute right-0 top-1/2 z-10 hidden h-12 w-12 translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/10 bg-[#111] text-white transition hover:bg-[#1a1a1a] lg:flex"
-              aria-label="Scroll right"
-            >
-              <ChevronRight />
-            </button>
-
-            <div
-              ref={scrollRef}
-              onMouseEnter={() => setHovered(true)}
-              onMouseLeave={() => setHovered(false)}
-              className="flex gap-4 sm:gap-5 overflow-x-auto scroll-smooth pb-4 no-scrollbar"
-            >
-              {testimonials.map((item) => (
-                <div
-                  key={item.id}
-                  className="min-w-[280px] max-w-[280px] shrink-0 sm:min-w-[320px] sm:max-w-[320px] xl:min-w-[calc((100%-60px)/4)]"
-                >
-                  <TestimonialCard item={item} />
-                </div>
-              ))}
-            </div>
+          {/* Desktop grid */}
+          <div className="hidden grid-cols-4 gap-5 xl:grid">
+            {testimonials.slice(0, 4).map((item) => (
+              <div key={item.id}>
+                <TestimonialCard item={item} />
+              </div>
+            ))}
           </div>
         </div>
       </SharedLayout>
