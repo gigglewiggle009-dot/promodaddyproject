@@ -20,6 +20,8 @@ import { AwardsSection } from "@/components/AwardsSection";
 import { ContactDetails } from "@/components/ContactDetails";
 import { ServiceAds } from "@/components/ServiceAds";
 import { HomeFaqSection } from "@/components/HomeFaqSection";
+import { HomeTestimonials } from "@/components/HomeTestimonials";
+
 import Script from "next/script";
 
 const faqSchema = {
@@ -97,6 +99,7 @@ const HomePageClient = () => {
       <OurProcess />
       {/* <Services /> */}
       <HomeFaqSection />
+      <HomeTestimonials/>
       {/* <Clients /> */}
       {/* <ContactDetails /> */}
       {/* <UserRecommend /> */}

@@ -4,22 +4,34 @@ import React, { useState } from "react";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { SharedLayout } from "@/components/SharedComponent";
 
+const officeAddress =
+  "Plot No. 26, Mahaveer Nagar Vistar Yojana, Kota, Rajasthan - 324005, India";
+
+const googleMapsLink =
+  "https://www.google.com/maps/search/?api=1&query=Promodaddy%20Digital%2C%20Plot%20No.%2026%2C%20Mahaveer%20Nagar%20Vistar%20Yojana%2C%20Kota%2C%20Rajasthan%20324005%2C%20India";
+
+const googleEmbedMap =
+  "https://www.google.com/maps?q=Plot%20No.%2026,%20Mahaveer%20Nagar%20Vistar%20Yojana,%20Kota,%20Rajasthan%20324005,%20India&z=19&output=embed";
+
 const contactDetails = [
   {
     icon: Phone,
     label: "PHONE / WHATSAPP",
     value: "+91 8690522210",
+    href: "tel:+918690522210",
   },
   {
     icon: Mail,
     label: "EMAIL",
     value: "info@promodaddy.in",
+    href: "mailto:info@promodaddy.in",
   },
   {
     icon: MapPin,
     label: "OFFICE",
     value:
       "Plot No. 26, Mahaveer Nagar Vistar Yojana,\nKota, Rajasthan - 324005",
+    href: googleMapsLink,
   },
 ];
 
@@ -45,28 +57,26 @@ export const ContactDetails = () => {
   };
 
   const handleWhatsAppSubmit = async (e) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  if (!formData.name || !formData.phone || !formData.email || !formData.service) {
-    setStatus("Please fill all required fields.");
-    return;
-  }
+    if (!formData.name || !formData.phone || !formData.email || !formData.service) {
+      setStatus("Please fill all required fields.");
+      return;
+    }
 
-  try {
-    setIsSubmitting(true);
-    setStatus("Processing...");
+    try {
+      setIsSubmitting(true);
+      setStatus("Processing...");
 
-    // ✅ 1. Send data to your API (save/log/email later)
-    await fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
+      await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-    // ✅ 2. Open WhatsApp
-    const text = `New Consultation Request
+      const text = `New Consultation Request
 
 Name: ${formData.name}
 Phone: ${formData.phone}
@@ -74,27 +84,27 @@ Email: ${formData.email}
 Service: ${formData.service}
 Message: ${formData.message || "No message provided"}`;
 
-    const phoneNumber = "918770537819";
-    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
+      const phoneNumber = "918770537819";
+      const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
 
-    window.open(url, "_blank");
+      window.open(url, "_blank");
 
-    setFormData({
-      name: "",
-      phone: "",
-      email: "",
-      service: "",
-      message: "",
-    });
+      setFormData({
+        name: "",
+        phone: "",
+        email: "",
+        service: "",
+        message: "",
+      });
 
-    setStatus("WhatsApp opened successfully!");
-  } catch (error) {
-    console.error(error);
-    setStatus("Something went wrong.");
-  } finally {
-    setIsSubmitting(false);
-  }
-};
+      setStatus("WhatsApp opened successfully!");
+    } catch (error) {
+      console.error(error);
+      setStatus("Something went wrong.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <section className="bg-black py-15 text-white md:py-28">
@@ -125,9 +135,15 @@ Message: ${formData.message || "No message provided"}`;
                       <p className="mb-1 text-xs uppercase tracking-[0.22em] text-white/45">
                         {item.label}
                       </p>
-                      <p className="whitespace-pre-line text-xl font-medium leading-relaxed text-white/95">
+
+                      <a
+                        href={item.href}
+                        target={item.label === "OFFICE" ? "_blank" : undefined}
+                        rel={item.label === "OFFICE" ? "noopener noreferrer" : undefined}
+                        className="whitespace-pre-line text-xl font-medium leading-relaxed text-white/95 transition hover:text-[#f47c20]"
+                      >
                         {item.value}
-                      </p>
+                      </a>
                     </div>
                   </div>
                 );
@@ -218,7 +234,7 @@ Message: ${formData.message || "No message provided"}`;
                   className={`text-sm font-medium ${
                     status.toLowerCase().includes("successfully")
                       ? "text-green-600"
-                      : status.toLowerCase().includes("opening")
+                      : status.toLowerCase().includes("processing")
                       ? "text-blue-600"
                       : "text-red-600"
                   }`}
@@ -235,6 +251,47 @@ Message: ${formData.message || "No message provided"}`;
                 {isSubmitting ? "Opening..." : "Get Free Consultation"}
               </button>
             </form>
+          </div>
+        </div>
+
+        {/* LOCATION MAP */}
+        <div className="mt-16">
+          <div className="mb-6">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#f47c20]">
+              Visit Our Office
+            </p>
+
+            <h3 className="mt-2 text-3xl font-bold text-white sm:text-4xl">
+              Promodaddy Digital
+            </h3>
+
+            <a
+              href={googleMapsLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-3 block max-w-3xl text-white/70 leading-relaxed transition hover:text-[#f47c20]"
+            >
+              {officeAddress}
+            </a>
+          </div>
+
+          <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-[0_10px_40px_rgba(0,0,0,0.35)]">
+            <div className="absolute left-4 top-4 z-10 rounded-xl border border-white/10 bg-black/80 px-4 py-3 backdrop-blur-md">
+              <p className="text-sm font-semibold text-white">Promodaddy Digital</p>
+              <p className="text-xs text-white/70">Kota, Rajasthan</p>
+            </div>
+
+            <iframe
+              src={googleEmbedMap}
+              width="100%"
+              height="500"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Promodaddy Digital Location Map"
+              className="w-full"
+            />
           </div>
         </div>
       </SharedLayout>
