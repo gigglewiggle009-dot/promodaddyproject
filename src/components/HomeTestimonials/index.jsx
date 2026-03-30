@@ -64,6 +64,46 @@ const testimonials = [
     initial: "V",
     initialBg: "bg-slate-500",
   },
+  {
+  id: 7,
+  name: "Mitali Garg",
+  time: "1 month ago",
+  rating: 4,
+  review:
+    "My experience with Promodaddy Digital was smooth and professional. They understood my business needs very well. A reliable digital marketing agency in Kota for small businesses.",
+  initial: "M",
+  initialBg: "bg-green-600",
+},
+{
+  id: 8,
+  name: "Satish Nath",
+  time: "2 months ago",
+  rating: 5,
+  review:
+    "Promodaddy Digital ke saath kaam karke kaafi accha experience raha. Team creative hai, timely delivery karti hai aur ads + reels dono me proper guidance deti hai. Brand ko professional aur premium look milta hai.",
+  initial: "S",
+  initialBg: "bg-blue-500",
+},
+{
+  id: 9,
+  name: "Hansu Agrawal",
+  time: "1 month ago",
+  rating: 5,
+  review:
+    "Promodaddy Digital LLP is undoubtedly the best digital marketing agency in Kota for SEO. Their experts improved our rankings and fixed technical issues. Highly recommended for genuine SEO services in Rajasthan.",
+  initial: "H",
+  initialBg: "bg-purple-600",
+},
+{
+  id: 10,
+  name: "Dushyant Bhaskar",
+  time: "1 month ago",
+  rating: 5,
+  review:
+    "Excellent service and very supportive team. They helped us with digital branding from scratch. One of the best experiences with any agency. Highly recommended for business growth.",
+  initial: "D",
+  initialBg: "bg-indigo-600",
+},
 ];
 
 const GoogleBadge = () => (
