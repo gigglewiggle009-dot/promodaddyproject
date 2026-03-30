@@ -71,3 +71,23 @@ a {
     transform: translateX(-50%);
   }
 }
+
+/* FULL scrollbar removal */
+.no-scrollbar::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  display: none;
+}
+
+.no-scrollbar::-webkit-scrollbar-track {
+  display: none;
+}
+
+.no-scrollbar::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
