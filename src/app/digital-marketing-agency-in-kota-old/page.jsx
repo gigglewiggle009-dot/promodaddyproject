@@ -1,5 +1,5 @@
 
-import kotaImg from "@/assets/kotaimage.png";
+import kotaImg from "@/assets/kotaimage.jpg";
 import marketingImg from "@/assets/marketing-team.jpg";
 import ecommerceImg from "@/assets/ecommerce.png";
 import healthcareImg from "@/assets/healthcare.png";
