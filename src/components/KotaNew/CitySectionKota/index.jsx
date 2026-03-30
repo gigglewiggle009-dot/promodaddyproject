@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import kotaImg from "@/assets/kotaimage.png";
+import kotaImg from "@/assets/kotaimage.jpg";
 import { SharedLayout } from "@/components/SharedComponent";
 
 export const CitySectionKota = () => {

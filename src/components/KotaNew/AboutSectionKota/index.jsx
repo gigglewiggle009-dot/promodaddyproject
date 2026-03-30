@@ -60,24 +60,24 @@ export const AboutSectionKota = () => {
             </div>
 
             {/* Floating Badge 1 */}
-            <div className="absolute left-4 sm:left-6 top-4 sm:top-6 bg-black/70 backdrop-blur-md border border-white/10 rounded-2xl px-4 py-3 shadow-xl">
+            {/* <div className="absolute left-4 sm:left-6 top-4 sm:top-6 bg-black/70 backdrop-blur-md border border-white/10 rounded-2xl px-4 py-3 shadow-xl">
               <p className="text-xs text-gray-400 uppercase tracking-wider">
                 Trusted Growth
               </p>
               <p className="text-sm sm:text-base font-semibold text-white">
                 Local Expertise + National Execution
               </p>
-            </div>
+            </div> */}
 
             {/* Floating Badge 2 */}
-            <div className="absolute right-4 sm:right-6 bottom-4 sm:bottom-6 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl px-4 py-3 shadow-2xl">
+            {/* <div className="absolute right-4 sm:right-6 bottom-4 sm:bottom-6 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl px-4 py-3 shadow-2xl">
               <p className="text-xs text-white/80 uppercase tracking-wider">
                 Fast Launch
               </p>
               <p className="text-sm sm:text-base font-semibold text-white">
                 Ads Live in 7 Days
               </p>
-            </div>
+            </div> */}
           </div>
 
           {/* RIGHT CONTENT SIDE */}
