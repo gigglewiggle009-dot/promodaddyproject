@@ -1,27 +1,40 @@
-// "use client";
-import { servicebanner } from "@/assets";
-import { Clients, Services } from "@/components";
-import { SmallBanner } from "@/components/SharedComponent";
-import LetsCreate from "@/components/letscreate";
+import { ServicesHero } from "@/components/ServiceSection/ServicesHero";
+// import { ServicesStats } from "@/components/services/ServicesStats";
+// import { ServicesWhyPromodaddy } from "@/components/services/ServicesWhyPromodaddy";
+import { ServicesGrid } from "@/components/ServiceSection/ServicesGrid";
+import { ServicesExplained } from "@/components/ServiceSection/ServicesExplained";
+import { ServicesComparisonTable } from "@/components/ServiceSection/ServicesComparisonTable";
+import { ServicesPricing } from "@/components/ServiceSection/ServicesPricing";
+import { ServicesIndustries } from "@/components/ServiceSection/ServicesIndustries";
+import { ServicesProcess } from "@/components/ServiceSection/ServicesProcess";
+import {CaseStudiesSectionKota } from "@/components/KotaNew/CaseStudiesSectionKota";
+import {WhyChooseUsSectionKota} from "@/components/KotaNew/WhyChooseUsSectionKota";
+// import { ServicesCaseStudies } from "@/components/ServiceSection/ServicesCaseStudies";
+import { ServicesWhyChoose } from "@/components/ServiceSection/ServicesWhyChoose";
+import { ServicesFAQ } from "@/components/ServiceSection/ServicesFAQ";
+import { ServicesCTA } from "@/components/ServiceSection/ServicesCTA";
 import React from "react";
-
 export const metadata = {
-  title: "Our Services - PromoDaddy Digital",
-  description: "Discover the wide range of services offered by PromoDaddy Digital, delivering innovative solutions for your business.",
+  title: "Digital Marketing Services in India | Promodaddy Digital",
+  description: "Promodaddy Digital offers SEO, Google Ads, Meta Ads, Social Media, YouTube Marketing, Website Development & more. Real results for Indian businesses. Get a free audit today.",
 };
 
-function page() {
+export default function ServicePage() {
   return (
-    <div>
-      <SmallBanner
-        sectionsName="Service"
-        discriptions="We work with you to transform your organization, driving bold ideas and pragmatic solutions."
-        bannerImage={servicebanner.src}
-      />
-      <Clients />
-      <LetsCreate />
-    </div>
+    <main>
+      <ServicesHero/>
+      <ServicesWhyChoose />
+      <ServicesGrid/>
+      <ServicesExplained/>
+      <ServicesComparisonTable />
+      <ServicesPricing/>
+      <ServicesIndustries/>
+      <ServicesProcess />
+      <CaseStudiesSectionKota />
+      <WhyChooseUsSectionKota />
+      <ServicesFAQ />
+      <ServicesCTA />
+    </main>
   );
 }
 
-export default page;
