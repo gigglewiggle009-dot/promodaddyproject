@@ -13,7 +13,7 @@ const GoogleAdsCTA = () => {
 
       <SharedLayout>
         <div className="mx-auto max-w-5xl">
-          <div className="relative overflow-hidden rounded-[32px] border border-white/10 bg-gradient-to-b from-[#14101f] to-[#0d0b12] px-6 py-12 shadow-[0_0_60px_rgba(139,92,246,0.08)] sm:px-8 md:px-12 md:py-16">
+          <div className="relative z-10 mx-auto max-w-5xl px-6 py-12 sm:px-8 md:px-12 md:py-16 text-center">
             {/* Inner glow */}
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(139,92,246,0.10),_transparent_60%)]" />
 

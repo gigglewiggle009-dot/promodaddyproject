@@ -21,7 +21,7 @@ const serviceMenu = {
   digitalMarketing: [
     { label: "SEO Services", href: "/seo-services-in-india" },
     { label: "Google Ads / PPC", href: "/google-ads" },
-    { label: "Meta Ads", href: "/meta-ads-services" },
+    { label: "Meta Ads", href: "/meta-ads" },
     { label: "Social Media Marketing", href: "/social-media-marketing" },
     { label: "YouTube Marketing", href: "/youtube-marketing" },
   ],
