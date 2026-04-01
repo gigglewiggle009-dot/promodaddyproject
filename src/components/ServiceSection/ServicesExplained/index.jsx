@@ -36,7 +36,7 @@ const servicesDetails = [
       "E-commerce SEO for product pages and category rankings",
     ],
     cta: "Get Free SEO Audit",
-    link: "/seo-services",
+    link: "/seo-services-in-india",
     icon: Search,
   },
   {
