@@ -76,7 +76,7 @@ export const ServicesComparisonTable = () => {
         <div className="relative z-10">
           {/* Heading */}
           <div className="mb-10 text-center md:mb-14">
-            <h2 className="text-2xl font-semibold sm:text-3xl md:text-4xl">
+            <h2 className="text-2xl font-semibold sm:text-3xl md:text-4xl leading-tight">
               All Digital Marketing Services{" "}
               <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400 bg-clip-text text-transparent">
                 — At a Glance
@@ -88,85 +88,51 @@ export const ServicesComparisonTable = () => {
             </p>
           </div>
 
-          {/* Desktop Table */}
-          <div className="hidden overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] shadow-[0_0_30px_rgba(139,92,246,0.06)] md:block">
-            {/* Header */}
-            <div className="grid grid-cols-4 border-b border-white/10 bg-gradient-to-r from-purple-600 via-purple-500 to-indigo-600 px-6 py-4 text-sm font-semibold uppercase tracking-[0.14em] text-white">
-              <div>Service</div>
-              <div>Best For</div>
-              <div>Timeline</div>
-              <div>Ideal For</div>
-            </div>
+          {/* Same Table for Desktop + Mobile */}
+          <div className="overflow-x-auto rounded-2xl border border-white/10 bg-white/[0.02] shadow-[0_0_30px_rgba(139,92,246,0.06)]">
+            <div className="min-w-[900px]">
+              {/* Header */}
+              <div className="grid grid-cols-4 border-b border-white/10 bg-gradient-to-r from-purple-600 via-purple-500 to-indigo-600 px-4 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-white sm:px-6 sm:text-sm">
+                <div>Service</div>
+                <div>Best For</div>
+                <div>Timeline</div>
+                <div>Ideal For</div>
+              </div>
 
-            {/* Rows */}
-            <div>
-              {servicesComparisonData.map((item, index) => (
-                <div
-                  key={index}
-                  className="grid grid-cols-4 items-center border-b border-white/5 px-6 py-5 transition duration-300 last:border-b-0 hover:bg-white/[0.03]"
-                >
-                  <div className="pr-4 text-base font-semibold text-white">
-                    {item.service}
-                  </div>
+              {/* Rows */}
+              <div>
+                {servicesComparisonData.map((item, index) => (
+                  <div
+                    key={index}
+                    className="grid grid-cols-4 items-center border-b border-white/5 px-4 py-4 transition duration-300 last:border-b-0 hover:bg-white/[0.03] sm:px-6 sm:py-5"
+                  >
+                    <div className="pr-4 text-sm font-semibold text-white sm:text-base">
+                      {item.service}
+                    </div>
 
-                  <div className="pr-4 text-sm leading-6 text-gray-300">
-                    {item.bestFor}
-                  </div>
+                    <div className="pr-4 text-xs leading-6 text-gray-300 sm:text-sm">
+                      {item.bestFor}
+                    </div>
 
-                  <div className="pr-4">
-                    <span className="inline-flex rounded-lg border border-purple-400/30 bg-purple-500/10 px-3 py-1 text-xs font-semibold text-purple-300">
-                      {item.timeline}
-                    </span>
-                  </div>
-
-                  <div className="text-sm leading-6 text-gray-300">
-                    {item.idealFor}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Mobile Cards */}
-          <div className="space-y-4 md:hidden">
-            {servicesComparisonData.map((item, index) => (
-              <div
-                key={index}
-                className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 shadow-[0_0_20px_rgba(139,92,246,0.05)]"
-              >
-                <h3 className="text-lg font-semibold text-white">
-                  {item.service}
-                </h3>
-
-                <div className="mt-4 space-y-3">
-                  <div>
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-purple-300">
-                      Best For
-                    </p>
-                    <p className="mt-1 text-sm text-gray-300">{item.bestFor}</p>
-                  </div>
-
-                  <div>
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-purple-300">
-                      Timeline
-                    </p>
-                    <div className="mt-1">
-                      <span className="inline-flex rounded-lg border border-purple-400/30 bg-purple-500/10 px-3 py-1 text-xs font-semibold text-purple-300">
+                    <div className="pr-4">
+                      <span className="inline-flex rounded-lg border border-purple-400/30 bg-purple-500/10 px-3 py-1 text-[11px] font-semibold text-purple-300 sm:text-xs">
                         {item.timeline}
                       </span>
                     </div>
-                  </div>
 
-                  <div>
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-purple-300">
-                      Ideal For
-                    </p>
-                    <p className="mt-1 text-sm text-gray-300">{item.idealFor}</p>
+                    <div className="text-xs leading-6 text-gray-300 sm:text-sm">
+                      {item.idealFor}
+                    </div>
                   </div>
-                </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
+
+          {/* Optional small helper text for mobile */}
+          <p className="mt-4 text-center text-xs text-gray-500 md:hidden">
+            Swipe left/right to view full table
+          </p>
         </div>
       </SharedLayout>
     </section>

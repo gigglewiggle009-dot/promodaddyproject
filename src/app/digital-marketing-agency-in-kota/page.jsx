@@ -11,7 +11,7 @@ import { FaqSectionKota } from "@/components/KotaNew/FaqSectionKota";
 // import { ContactDetailsKota } from "@/components/ContactDetailsKota";
 
 export const metadata = {
-  title: "Digital Marketing Agency in Kota | Promodaddy Digital",
+  title: "Digital Marketing Agency in Kota",
   description:
     "Promodaddy Digital — top-rated Digital Marketing Agency in Kota. SEO, Google Ads & social media for coaching institutes, businesses & brands. Real results, local expertise.",
   alternates: {

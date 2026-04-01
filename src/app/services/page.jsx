@@ -15,7 +15,7 @@ import { ServicesFAQ } from "@/components/ServiceSection/ServicesFAQ";
 import { ServicesCTA } from "@/components/ServiceSection/ServicesCTA";
 import React from "react";
 export const metadata = {
-  title: "Digital Marketing Services in India | Promodaddy Digital",
+  title: "Digital Marketing Services in India",
   description: "Promodaddy Digital offers SEO, Google Ads, Meta Ads, Social Media, YouTube Marketing, Website Development & more. Real results for Indian businesses. Get a free audit today.",
 };
 
