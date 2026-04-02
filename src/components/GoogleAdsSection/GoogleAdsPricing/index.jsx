@@ -90,9 +90,12 @@ const GoogleAdsPricing = () => {
                   {plan.bestFor}
                 </p>
 
-                <p className="mb-8 text-sm text-purple-300 sm:text-base">
-                  {plan.adSpend}
-                </p>
+           <p className="mb-8 text-sm sm:text-base text-gray-300">
+            <span className="text-gray-400">Ad Spend :</span>{" "}
+            <span className="text-purple-300 font-medium">
+              {plan.adSpend}
+            </span>
+          </p>
 
                 <div className="mt-auto">
                   <Link href="/contact" className="block">

@@ -96,7 +96,7 @@ const servicesDetails = [
       "Monthly analytics report — reach, engagement, follower growth",
     ],
     cta: "Get Social Media Plan",
-    link: "/social-media-marketing",
+    link: "/social-media-marketing-india",
     icon: Share2,
   },
   {

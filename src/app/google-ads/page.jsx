@@ -9,6 +9,7 @@ import GoogleAdsWhyUs from "@/components/GoogleAdsSection/GoogleAdsWhyUs";
 import {CaseStudiesSectionKota } from "@/components/KotaNew/CaseStudiesSectionKota";
 import GoogleAdsFAQ from "@/components/GoogleAdsSection/GoogleAdsFAQ";
 import GoogleAdsCTA from "@/components/GoogleAdsSection/GoogleAdsCTA";
+import GoogleAdsCPLSection from "@/components/GoogleAdsSection/GoogleAdsCPLSection";
 
 export const metadata = {
   title: "Google Ads Management in India | Promodaddy Digital",
@@ -149,6 +150,7 @@ export default function GoogleAdsPage() {
         <GoogleAdsHero />
         <WhyGoogleAds />
         <GoogleAdsServices />
+        <GoogleAdsCPLSection/>
         <GoogleAdsProcess />
         <GoogleAdsResults />
         <GoogleAdsPricing />

@@ -22,7 +22,7 @@ const serviceMenu = {
     { label: "SEO Services", href: "/seo-services-in-india" },
     { label: "Google Ads / PPC", href: "/google-ads" },
     { label: "Meta Ads", href: "/meta-ads" },
-    { label: "Social Media Marketing", href: "/social-media-marketing" },
+    { label: "Social Media Marketing", href: "/social-media-marketing-india" },
     { label: "YouTube Marketing", href: "/youtube-marketing" },
   ],
   brandingGrowth: [
@@ -81,10 +81,10 @@ export const SharedHeader = () => {
                         {/* TEXT LINK */}
                         <Link href={nav.link}>
                           <p
-                            className={`w-fit font-bold text-white text-base ${
-                              path === nav.link
-                                ? "underline decoration-2 underline-offset-8 text-blue-500"
-                                : "hover:text-btnColor"
+                            className={`w-fit font-bold text-base transition-colors duration-300 ${
+                              servicesOpen || path === nav.link
+                                ? "text-purple-400"
+                                : "text-white hover:text-purple-300"
                             }`}
                           >
                             {nav.name}
@@ -95,7 +95,11 @@ export const SharedHeader = () => {
                         <button
                           type="button"
                           onClick={() => setServicesOpen((prev) => !prev)}
-                          className="text-white hover:text-btnColor transition"
+                          className={`transition-colors duration-300 ${
+                            servicesOpen
+                              ? "text-purple-400"
+                              : "text-white hover:text-purple-300"
+                          }`}
                         >
                           <ChevronDown
                             size={18}
@@ -106,50 +110,54 @@ export const SharedHeader = () => {
                         </button>
                       </div>
 
-                      {/* ================= COMPACT MEGA MENU ================= */}
+                      {/* ================= UPDATED MEGA MENU ================= */}
                       <div
-                        className={`absolute left-1/2 top-[calc(100%+10px)] z-[999] w-[660px] -translate-x-1/2 rounded-[18px] border border-black/10 bg-white shadow-[0_18px_50px_rgba(0,0,0,0.18)] transition-all duration-300 ${
-                          servicesOpen
-                            ? "visible translate-y-0 opacity-100"
-                            : "invisible -translate-y-2 opacity-0"
-                        }`}
-                      >
-                        <div className="grid grid-cols-2">
-                          {/* LEFT COLUMN */}
-                          <div className="border-r border-gray-200 px-6 py-5">
-                            <h3 className="mb-4 text-[15px] font-bold tracking-[0.08em] text-black uppercase">
-                              Digital Marketing
-                            </h3>
+  className={`absolute left-1/2 top-[calc(100%+22px)] z-[999] w-[980px] -translate-x-1/2 rounded-[18px] border border-black/10 bg-white shadow-[0_24px_70px_rgba(0,0,0,0.22)] transition-all duration-300 ${
+    servicesOpen
+      ? "visible translate-y-0 opacity-100"
+      : "invisible -translate-y-2 opacity-0"
+  }`}
+>
+  <div className="grid grid-cols-2">
+    {/* LEFT COLUMN */}
+    <div className="border-r border-gray-200 px-10 py-8">
+      <h3 className="relative mb-6 text-[16px] font-bold tracking-[0.04em] text-black uppercase pb-2">
+        Digital Marketing
+        <span className="absolute left-0 bottom-0 h-[3px] w-10 bg-purple-600"></span>
+        <span className="absolute left-10 bottom-0 h-[3px] w-10 bg-purple-300"></span>
+      </h3>
 
-                            <div className="space-y-2.5">
-                              {serviceMenu.digitalMarketing.map((item, i) => (
-                                <Link key={i} href={item.href}>
-                                  <p className="text-[15px] font-medium leading-[1.3] text-black hover:text-btnColor transition cursor-pointer">
-                                    {item.label}
-                                  </p>
-                                </Link>
-                              ))}
-                            </div>
-                          </div>
+      <div className="space-y-5">
+        {serviceMenu.digitalMarketing.map((item, i) => (
+          <Link key={i} href={item.href}>
+            <p className="cursor-pointer text-[17px] font-medium leading-[1.5] text-black transition-colors duration-300 hover:text-purple-600">
+              {item.label}
+            </p>
+          </Link>
+        ))}
+      </div>
+    </div>
 
-                          {/* RIGHT COLUMN */}
-                          <div className="px-6 py-5">
-                            <h3 className="mb-4 text-[15px] font-bold tracking-[0.08em] text-black uppercase">
-                              Branding & Growth
-                            </h3>
+    {/* RIGHT COLUMN */}
+    <div className="px-10 py-8">
+      <h3 className="relative mb-6 text-[16px] font-bold tracking-[0.04em] text-black uppercase pb-2">
+      Branding & Growth
+      <span className="absolute left-0 bottom-0 h-[3px] w-10 bg-purple-600"></span>
+      <span className="absolute left-10 bottom-0 h-[3px] w-10 bg-purple-300"></span>
+    </h3>
 
-                            <div className="space-y-2.5">
-                              {serviceMenu.brandingGrowth.map((item, i) => (
-                                <Link key={i} href={item.href}>
-                                  <p className="text-[15px] font-medium leading-[1.3] text-black hover:text-btnColor transition cursor-pointer">
-                                    {item.label}
-                                  </p>
-                                </Link>
-                              ))}
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+      <div className="space-y-5">
+        {serviceMenu.brandingGrowth.map((item, i) => (
+          <Link key={i} href={item.href}>
+            <p className="cursor-pointer text-[17px] font-medium leading-[1.5] text-black transition-colors duration-300 hover:text-purple-600">
+              {item.label}
+            </p>
+          </Link>
+        ))}
+      </div>
+    </div>
+  </div>
+</div>
                     </div>
                   );
                 }
@@ -158,7 +166,7 @@ export const SharedHeader = () => {
                 return (
                   <Link href={nav.link} key={index}>
                     <p
-                      className={`w-fit font-bold text-white text-base ${
+                      className={`w-fit font-bold text-white text-base transition-colors duration-300 ${
                         path === nav.link
                           ? "underline decoration-2 underline-offset-8 text-blue-500"
                           : "hover:text-btnColor"
