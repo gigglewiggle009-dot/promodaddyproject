@@ -1,13 +1,13 @@
-import { YouTubeMarketingHero } from "@/components/youtubeMarketing/YouTubeMarketingHero";
-import { YouTubeMarketingWhyUs } from "@/components/youtubeMarketing/YouTubeMarketingWhyUs";
-import { YouTubeMarketingProcess } from "@/components/youtubeMarketing/YouTubeMarketingProcess";
-import { YouTubeMarketingIndustries } from "@/components/youtubeMarketing/YouTubeMarketingIndustries";
-import { YouTubeMarketingServices } from "@/components/youtubeMarketing/YouTubeMarketingServices";
-import { YouTubeMarketingResults } from "@/components/youtubeMarketing/YouTubeMarketingResults";
+import { YouTubeMarketingHero } from "@/components/YouTubeMarketing/YouTubeMarketingHero";
+import { YouTubeMarketingWhyUs } from "@/components/YouTubeMarketing/YouTubeMarketingWhyUs";
+import { YouTubeMarketingProcess } from "@/components/YouTubeMarketing/YouTubeMarketingProcess";
+import { YouTubeMarketingIndustries } from "@/components/YouTubeMarketing/YouTubeMarketingIndustries";
+import { YouTubeMarketingServices } from "@/components/YouTubeMarketing/YouTubeMarketingServices";
+import { YouTubeMarketingResults } from "@/components/YouTubeMarketing/YouTubeMarketingResults";
 import {YouTubeMarketingComparison} from "@/components/YouTubeMarketing/YouTubeMarketingComparison";
 import {YouTubeMarketingPricing} from "@/components/YouTubeMarketing/YouTubeMarketingPricing";
-import { YouTubeMarketingFaq } from "@/components/youtubeMarketing/YouTubeMarketingFaq";
-import { YouTubeMarketingCTA } from "@/components/youtubeMarketing/YouTubeMarketingCTA";
+import { YouTubeMarketingFaq } from "@/components/YouTubeMarketing/YouTubeMarketingFaq";
+import { YouTubeMarketingCTA } from "@/components/YouTubeMarketing/YouTubeMarketingCTA";
 
 export const metadata = {
   title: "YouTube Marketing Agency India",
