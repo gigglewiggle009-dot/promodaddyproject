@@ -22,7 +22,7 @@ const serviceMenu = {
     { label: "Google Ads / PPC", href: "/google-ads" },
     { label: "Meta Ads", href: "/meta-ads" },
     { label: "Social Media Marketing", href: "/social-media-marketing-india" },
-    { label: "YouTube Marketing", href: "/youtube-marketing" },
+    { label: "YouTube Marketing", href: "/youtube-marketing-agency-india" },
   ],
   brandingGrowth: [
     { label: "Website Development", href: "/website-development" },

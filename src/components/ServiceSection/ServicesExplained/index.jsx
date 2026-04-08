@@ -116,7 +116,7 @@ const servicesDetails = [
       "Monthly YouTube analytics report",
     ],
     cta: "Grow My YouTube Channel",
-    link: "/youtube-marketing",
+    link: "/youtube-marketing-agency-india",
     icon: Youtube,
   },
   {
