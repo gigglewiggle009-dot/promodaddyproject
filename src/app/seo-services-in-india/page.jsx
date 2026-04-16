@@ -13,11 +13,11 @@ import { SeoCTA } from "@/components/SeoServiceSection/SeoCTA";
 import { seoFaqs } from "@/components/SeoServiceSection/SeoFAQData";
 
 export const metadata = {
-  title: "SEO Services in India | Promodaddy Digital",
+  title: "SEO Services in India",
   description:
     "Professional SEO services in India for local businesses, coaching institutes, e-commerce brands and growing companies. Get a free SEO audit today.",
   alternates: {
-    canonical: "https://www.promodaddy.in/seo-services",
+    canonical: "https://www.promodaddy.in/seo-services-in-india",
   },
   robots: {
     index: true,
@@ -28,7 +28,7 @@ export const metadata = {
     title: "SEO Services in India | Promodaddy Digital",
     description:
       "Professional SEO services in India for local businesses, coaching institutes, e-commerce brands and growing companies. Get a free SEO audit today.",
-    url: "https://www.promodaddy.in/seo-services",
+    url: "https://www.promodaddy.in/seo-services-in-india",
     siteName: "Promodaddy Digital",
   },
   twitter: {
@@ -78,7 +78,7 @@ const serviceSchema = {
     "@type": "Country",
     name: "India",
   },
-  url: "https://www.promodaddy.in/seo-services",
+  url: "https://www.promodaddy.in/seo-services-in-india",
 };
 
 const faqSchema = {
