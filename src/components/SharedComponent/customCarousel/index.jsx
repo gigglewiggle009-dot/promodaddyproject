@@ -1,50 +1,81 @@
-import React, { ReactNode, useEffect } from "react";
-import dynamic from "next/dynamic";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
+"use client";
 
+import React, { useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation } from "swiper/modules";
 import Image from "next/image";
 import { arrowLeft, arrowRight } from "@/assets";
 
-const $ = require("jquery");
+import "swiper/css";
+import "swiper/css/navigation";
 
-const OwlCarousel = dynamic(() => import("react-owl-carousel-rtl"), {
-  ssr: false,
-});
+const CustomCarousel = ({
+  children,
+  direction = "ltr",
+  loop = false,
+  carouselId = "carouselId",
+}) => {
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
 
-
-
-const CustomCarousel = ({ children, direction = "ltr", loop = false, carouselId = "carouselId" }) => {
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.$ = window.jQuery = require("jquery");
-    }
-  }, []);
+  const itemsArray = React.Children.toArray(children);
 
   return (
     <div>
-      <OwlCarousel
-        items={2}
-        autoWidth
-        dotsClass="owl-dots"
-        dots={false}
-        margin={20}
-        rtl={direction === "ltr" ? false : true}
-        loop={false}
-        autoplay={loop}
-        autoplayTimeout={3000}
-        autoplayHoverPause={true}
-        id={carouselId}
+      <Swiper
+        modules={[Autoplay, Navigation]}
+        dir={direction}
+        spaceBetween={20}
+        slidesPerView={"auto"}
+        loop={loop}
+        autoplay={
+          loop
+            ? {
+                delay: 3000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+              }
+            : false
+        }
+        navigation={
+          carouselId === "reviewCarousel"
+            ? {
+                prevEl: prevRef.current,
+                nextEl: nextRef.current,
+              }
+            : false
+        }
+        onBeforeInit={(swiper) => {
+          if (carouselId === "reviewCarousel") {
+            swiper.params.navigation.prevEl = prevRef.current;
+            swiper.params.navigation.nextEl = nextRef.current;
+          }
+        }}
+        className="!overflow-visible"
       >
-        {children}
-      </OwlCarousel>
+        {itemsArray.map((child, index) => (
+          <SwiperSlide key={index} className="!w-auto">
+            {child}
+          </SwiperSlide>
+        ))}
+      </Swiper>
+
       {carouselId === "reviewCarousel" && (
-        <div className="flex justify-center relative z-30 mt-10 gap-4 ">
-          <button className="w-12 h-12 bg-[#5b27f7] rounded-xl flex justify-center items-center" onClick={() => $(`#${carouselId}`).trigger("prev.owl.carousel")}>
-            <Image src={arrowLeft.src} alt="arrow" />
+        <div className="relative z-30 mt-10 flex justify-center gap-4">
+          <button
+            ref={prevRef}
+            className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#5b27f7]"
+            aria-label="Previous slide"
+          >
+            <Image src={arrowLeft.src} alt="Previous" width={20} height={20} />
           </button>
-          <button className="w-12 h-12 bg-[#5b27f7] rounded-xl flex justify-center items-center" onClick={() => $(`#${carouselId}`).trigger("next.owl.carousel")}>
-            <Image src={arrowRight.src} alt="arrow" />
+
+          <button
+            ref={nextRef}
+            className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#5b27f7]"
+            aria-label="Next slide"
+          >
+            <Image src={arrowRight.src} alt="Next" width={20} height={20} />
           </button>
         </div>
       )}
