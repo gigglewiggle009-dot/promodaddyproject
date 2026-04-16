@@ -194,7 +194,7 @@ export const SharedFooter = () => {
                       </a>
 
                       <a
-                        href="https://www.instagram.com/promodaddy_/"
+                        href="https://www.instagram.com/promodaddy_digital__?igsh=MTFtaWh5ZmtzYWFyYQ=="
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="PromoDaddy Digital on Instagram"
