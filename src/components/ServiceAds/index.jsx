@@ -22,57 +22,67 @@ const services = [
     description:
       "Rank on the first page of Google organically for long-term free traffic.",
     icon: Search,
+    link: "/seo-services-in-india",
   },
   {
     title: "Google Ads / PPC",
     description:
       "Get instant high-intent leads. Pay only when customers click.",
     icon: Megaphone,
+    link: "/google-ads",
   },
   {
     title: "Social Media Marketing",
     description:
       "Build a powerful brand presence on Instagram, Facebook, and YouTube.",
     icon: Instagram,
+    link: "/social-media-marketing-india",
   },
   {
     title: "Meta Ads (FB + Instagram)",
     description:
       "High-ROI performance marketing designed for sales and lead generation.",
     icon: Facebook,
+    link: "/meta-ads",
   },
   {
     title: "Website Development",
     description:
       "Fast, mobile-first, and SEO-ready websites that convert visitors into customers.",
     icon: Globe,
+    link: "/services", // or your dev page
   },
   {
     title: "YouTube Marketing",
     description: "Channel growth, video SEO, YouTube Ads.",
     icon: Youtube,
+    link: "/youtube-marketing-agency-india",
   },
   {
     title: "Celebrity PR & Branding",
     description:
       "Expert personal brand management for public figures and professionals.",
     icon: Star,
+    link: "/services", // adjust if page exists
   },
   {
     title: "Content Marketing",
     description: "SEO blogs, articles, and content strategy.",
     icon: FileText,
+    link: "/services",
   },
   {
     title: "Local SEO",
     description:
       "Dominate Google Maps and attract local customers in your city.",
     icon: MapPin,
+    link: "/services",
   },
   {
     title: "Influencer Marketing",
     description: "Brand collaborations with trusted influencers.",
     icon: Users,
+    link: "/services",
   },
 ];
 
@@ -160,7 +170,7 @@ export const ServiceAds = () => {
                         <p className="mb-3">{service.description}</p>
 
                         <Link
-                          href="/service-ads"
+                          href={service.link}
                           className="text-sm font-medium text-[#f47c20] hover:underline"
                         >
                           Get Started →

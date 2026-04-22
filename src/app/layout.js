@@ -6,6 +6,7 @@ import {
   GoToTop,
   SharedFooter,
   SharedHeader,
+  WhatsAppButton,
 } from "@/components/SharedComponent";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -229,6 +230,7 @@ export default function RootLayout({ children }) {
           <SharedHeader />
           <main className="pt-[95px] sm:pt-[110px]">{children}</main>
           <SharedFooter />
+          <WhatsAppButton />
           <GoToTop />
         </div>
       </body>
