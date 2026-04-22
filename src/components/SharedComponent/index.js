@@ -7,4 +7,5 @@ export { SharedCard } from "./SharedCard";
 export { RedLine } from "./RedLine";
 export { SharedTopBanner } from "./SharedTopBanner";
 export { GoToTop } from "./GoToTop";
+export { WhatsAppButton } from "./WhatsAppButton";
 export { SmallBanner } from "./SmallBanner";
