@@ -11,12 +11,12 @@ const nextConfig = {
 
   images: {
     unoptimized: true,
-    domains: [],
+    domains: ["cdn.sanity.io"],
     formats: ["image/avif", "image/webp"],
   },
 
   // Standalone build output
-  output: "standalone",
+  // output: "standalone",
 
   // Redirect rules
   async redirects() {
