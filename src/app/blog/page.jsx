@@ -1,65 +1,348 @@
 import Link from "next/link";
 import Image from "next/image";
 import { client, urlFor } from "@/lib/sanity";
+import { SharedLayout } from "@/components/SharedComponent";
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 export const metadata = {
-  title: "Digital Marketing Blog | Promodaddy Digital",
+  title: "Digital Marketing Blog in India | SEO, Ads & Growth Tips ",
   description:
-    "Latest SEO tips, ad strategies, and digital growth insights.",
+    "Read the latest SEO tips, Google Ads strategies, social media marketing insights, branding ideas, and digital growth articles from Promodaddy Digital.",
 };
 
 async function getBlogs() {
-  return client.fetch(`
-    *[_type == "blog" && defined(slug.current)] | order(_createdAt desc){
+  const data = await client.fetch(`
+    *[_type == "blog"] | order(publishedAt desc){
       _id,
       title,
       slug,
-      mainImage
+      mainImage,
+      excerpt,
+      category,
+      publishedAt
     }
   `);
+
+  // console.log("FINAL BLOGS:", data);
+  return data;
 }
+
+const blogTopics = [
+  "SEO",
+  "Google Ads / PPC",
+  "Meta Ads",
+  "Social Media Marketing",
+  "Website Development",
+  "Local SEO",
+  "Content Marketing",
+  "Branding & Growth",
+];
+
+const serviceLinks = [
+  {
+    title: "SEO Services",
+    href: "/seo-services",
+  },
+  {
+    title: "Google Ads Management",
+    href: "/google-ads-management",
+  },
+  {
+    title: "Social Media Marketing",
+    href: "/social-media-marketing-services",
+  },
+  {
+    title: "Meta Ads Services",
+    href: "/meta-ads-agency-india",
+  },
+  {
+    title: "Website Development",
+    href: "/website-development",
+  },
+  {
+    title: "Local SEO",
+    href: "/local-seo",
+  },
+];
 
 export default async function Page() {
   const blogs = await getBlogs();
+  // console.log("BLOGS:", blogs);
 
   return (
-    <section className="bg-[#0b0b0b] py-20 text-white">
-      <div className="mx-auto max-w-6xl px-6">
-        <h1 className="mb-10 text-4xl font-bold">
-          Promodaddy Digital Marketing Blog
-        </h1>
+    <main className="relative overflow-hidden bg-[#0b0b0b] text-white">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(139,92,246,0.12),_transparent_45%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,_rgba(99,102,241,0.10),_transparent_35%)]" />
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {blogs.map((blog) => (
-            <Link
-              key={blog._id}
-              href={`/blog/${blog.slug.current}`}
-              className="overflow-hidden rounded-2xl border border-white/10 transition hover:border-purple-400"
-            >
-              {blog.mainImage && (
-                <Image
-                  src={urlFor(blog.mainImage).width(800).height(500).url()}
-                  alt={blog.title}
-                  width={800}
-                  height={500}
-                  className="h-56 w-full object-cover"
-                />
-              )}
+      <section className="relative py-20 md:py-24">
+        <SharedLayout>
+          <div className="mx-auto max-w-4xl text-center">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-purple-400">
+              Insights & Growth
+            </p>
 
-              <div className="p-6">
-                <h2 className="text-lg font-semibold">{blog.title}</h2>
+            <h1 className="mb-6 text-4xl font-bold leading-tight sm:text-5xl md:text-6xl">
+              Digital Marketing Blog{" "}
+              <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400 bg-clip-text text-transparent">
+                in India
+              </span>
+            </h1>
 
-                <p className="mt-3 text-sm text-gray-400">Read article →</p>
+            <p className="mx-auto max-w-3xl text-base leading-relaxed text-white/70 sm:text-lg">
+              Explore practical insights on SEO, Google Ads, Meta Ads, social media marketing,
+              branding, website development, and lead generation strategies to grow your business
+              with smarter digital marketing.
+            </p>
+
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-3 text-sm text-white/70">
+              <span className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2">
+                SEO Tips
+              </span>
+              <span className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2">
+                Ad Strategies
+              </span>
+              <span className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2">
+                Website Growth
+              </span>
+              <span className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2">
+                Social Media Insights
+              </span>
+            </div>
+          </div>
+        </SharedLayout>
+      </section>
+
+      <section className="relative pb-10">
+        <SharedLayout>
+          <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
+            <div>
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-purple-400">
+                Why Read Our Blog
+              </p>
+
+              <h2 className="text-3xl font-bold leading-tight sm:text-4xl">
+                Useful marketing insights, not recycled internet noise
+              </h2>
+
+              <p className="mt-5 text-base leading-8 text-white/70">
+                The Promodaddy Digital blog is built for businesses that want practical,
+                result-focused marketing knowledge. We cover SEO, Google Ads, Meta Ads,
+                branding, social media growth, local SEO, website strategy, and lead generation
+                with a strong focus on what actually helps Indian businesses grow online.
+              </p>
+
+              <p className="mt-4 text-base leading-8 text-white/70">
+                Whether you run a coaching institute, healthcare brand, real estate business,
+                e-commerce store, local company, or service-based business, our articles are
+                designed to help you understand digital strategy in a simpler and more useful way.
+              </p>
+            </div>
+
+            <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur-sm">
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-purple-400">
+                Topics We Cover
+              </p>
+
+              <div className="mt-5 flex flex-wrap gap-3">
+                {blogTopics.map((topic) => (
+                  <span
+                    key={topic}
+                    className="rounded-full border border-white/10 bg-black/30 px-4 py-2 text-sm text-white/80"
+                  >
+                    {topic}
+                  </span>
+                ))}
               </div>
-            </Link>
-          ))}
-        </div>
-      </div>
-    </section>
+            </div>
+          </div>
+        </SharedLayout>
+      </section>
+
+      <section className="relative py-10">
+        <SharedLayout>
+          <div className="mb-10 flex items-end justify-between gap-4">
+            <div>
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-purple-400">
+                Latest Articles
+              </p>
+              <h2 className="text-3xl font-bold sm:text-4xl">
+                Explore our latest digital marketing insights
+              </h2>
+            </div>
+          </div>
+
+          {blogs?.length ? (
+            
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {blogs.map((blog) => (
+                <Link
+                  key={blog._id}
+                  href={`/blog/${blog.slug.current}`}
+                  className="group overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] transition duration-300 hover:-translate-y-1 hover:border-purple-400 hover:shadow-[0_0_30px_rgba(139,92,246,0.15)]"
+                >
+                  {blog.mainImage && (
+                    <div className="overflow-hidden">
+                      <Image
+                        src={urlFor(blog.mainImage).width(800).height(500).url()}
+                        alt={blog.title}
+                        width={800}
+                        height={500}
+                        className="h-56 w-full object-cover transition duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                  )}
+
+                  <div className="p-6">
+                    <div className="mb-3 flex flex-wrap items-center gap-3 text-xs text-white/50">
+                      {blog.category && (
+                        <span className="rounded-full border border-purple-400/30 bg-purple-500/10 px-3 py-1 text-purple-300">
+                          {blog.category}
+                        </span>
+                      )}
+
+                      {blog.publishedAt && (
+                        <span>
+                          {new Date(blog.publishedAt).toLocaleDateString("en-IN", {
+                            day: "numeric",
+                            month: "short",
+                            year: "numeric",
+                          })}
+                        </span>
+                      )}
+                    </div>
+
+                    <h3 className="line-clamp-2 text-xl font-semibold leading-relaxed transition group-hover:text-purple-400">
+                      {blog.title}
+                    </h3>
+
+                    <p className="mt-4 line-clamp-3 text-sm leading-7 text-white/65">
+                      {blog.excerpt ||
+                        "Read this article to explore actionable digital marketing strategies, growth insights, and practical ideas for improving your online presence."}
+                    </p>
+
+                    <p className="mt-5 text-sm font-medium text-gray-400 transition group-hover:text-white">
+                      Read article →
+                    </p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          ) : (
+            <div className="rounded-2xl border border-white/10 bg-white/[0.02] px-6 py-12 text-center">
+              <h2 className="mb-3 text-2xl font-semibold">No blogs available yet</h2>
+              <p className="text-white/70">
+                New marketing insights and updates will appear here soon.
+              </p>
+            </div>
+          )}
+        </SharedLayout>
+      </section>
+
+      <section className="relative py-10">
+        <SharedLayout>
+          <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-8 md:p-10">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-purple-400">
+              What You’ll Learn
+            </p>
+
+            <h2 className="text-3xl font-bold leading-tight sm:text-4xl">
+              Practical knowledge to improve rankings, leads, and brand visibility
+            </h2>
+
+            <div className="mt-8 grid gap-5 md:grid-cols-2">
+              {[
+                "How SEO helps businesses rank higher on Google",
+                "How Google Ads can generate faster leads and inquiries",
+                "How social media content improves engagement and visibility",
+                "How website structure affects conversions and user trust",
+                "How local SEO supports maps ranking and nearby leads",
+                "How branding and content improve long-term business growth",
+              ].map((item) => (
+                <div
+                  key={item}
+                  className="rounded-2xl border border-white/10 bg-black/20 px-5 py-4 text-white/80"
+                >
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+        </SharedLayout>
+      </section>
+
+      <section className="relative py-10">
+        <SharedLayout>
+          <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+            <div>
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-purple-400">
+                Beyond The Blog
+              </p>
+
+              <h2 className="text-3xl font-bold leading-tight sm:text-4xl">
+                Need execution, not just information?
+              </h2>
+
+              <p className="mt-5 text-base leading-8 text-white/70">
+                Reading helps. Execution gets results. If you want expert support for SEO,
+                Google Ads, Meta Ads, social media marketing, website development, or local SEO,
+                explore our services and find the right growth solution for your business.
+              </p>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              {serviceLinks.map((service) => (
+                <Link
+                  key={service.title}
+                  href={service.href}
+                  className="rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-5 transition duration-300 hover:border-purple-400 hover:bg-white/[0.05]"
+                >
+                  <h3 className="text-base font-semibold">{service.title}</h3>
+                  <p className="mt-2 text-sm text-white/55">Explore service →</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </SharedLayout>
+      </section>
+
+      <section className="relative py-16 md:py-20">
+        <SharedLayout>
+          <div className="rounded-3xl border border-purple-500/20 bg-gradient-to-r from-white/[0.05] to-white/[0.02] p-8 text-center md:p-12">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-purple-400">
+              Let’s Grow
+            </p>
+
+            <h2 className="text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
+              Want experts to grow your business, not just write about growth?
+            </h2>
+
+            <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-white/70">
+              Get a free consultation from Promodaddy Digital and discover the right SEO,
+              paid ads, content, and social media strategy for your business.
+            </p>
+
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+              <Link
+                href="/contact"
+                className="rounded-full bg-gradient-to-r from-purple-500 to-indigo-600 px-7 py-3 text-sm font-semibold text-white transition hover:scale-[1.02]"
+              >
+                Get Free Consultation
+              </Link>
+
+              <Link
+                href="/services"
+                className="rounded-full border border-white/15 px-7 py-3 text-sm font-semibold text-white/85 transition hover:border-purple-400 hover:text-white"
+              >
+                Explore Services
+              </Link>
+            </div>
+          </div>
+        </SharedLayout>
+      </section>
+    </main>
   );
 }
-
-
 // import React from "react";
 
 // export const metadata = {
