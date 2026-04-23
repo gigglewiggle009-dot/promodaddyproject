@@ -9,7 +9,7 @@ export const WhatsAppButton = () => {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"
-      className="fixed bottom-24 right-5 z-[999] flex h-15 w-15 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition hover:scale-110 hover:bg-[#1ebe5d]"
+      className="fixed bottom-10 right-2 z-[999] flex h-15 w-15 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition hover:scale-110 hover:bg-[#1ebe5d]"
     >
       <FaWhatsapp size={40} />
     </a>

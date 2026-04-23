@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import NextTopLoader from "nextjs-toploader";
 import "./globals.css";
 import {
-  GoToTop,
   SharedFooter,
   SharedHeader,
   WhatsAppButton,
@@ -231,7 +230,7 @@ export default function RootLayout({ children }) {
           <main className="pt-[95px] sm:pt-[110px]">{children}</main>
           <SharedFooter />
           <WhatsAppButton />
-          <GoToTop />
+          {/* <GoToTop /> */}
         </div>
       </body>
     </html>
