@@ -7,5 +7,13 @@ export const metadata = {
 };
 
 export default function ContactPage() {
-  return <ContactDetails />;
+  return (
+    <main className="bg-black text-white">
+      <h1 className="sr-only">
+        Google Ads & Paid Advertising Services in India
+      </h1>
+
+      <ContactDetails />
+    </main>
+  );
 }

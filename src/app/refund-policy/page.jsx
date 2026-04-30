@@ -9,6 +9,11 @@ const Page = () => {
   return (
     <div className="px-4 py-16 bg-black">
 
+      {/* Hidden H1 for SEO */}
+      <h1 className="sr-only">
+        Instant Service Delivery - Digital Marketing Services
+      </h1>
+
       <div className="p-6 mb-4 bg-gray-800 rounded-lg">
         <h2 className="mb-4 text-xl font-semibold text-white">
           Instant Service Delivery
