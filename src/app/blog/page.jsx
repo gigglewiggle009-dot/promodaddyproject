@@ -11,9 +11,12 @@ export const metadata = {
     "Read the latest SEO tips, Google Ads strategies, social media marketing insights, branding ideas, and digital growth articles from Promodaddy Digital.",
 };
 
+export const revalidates = 60;
+
 async function getBlogs() {
-  const data = await client.fetch(`
-    *[_type == "blog"] | order(publishedAt desc){
+  return client.fetch(
+    `
+    *[_type == "blog" && defined(slug.current)] | order(_createdAt desc){
       _id,
       title,
       slug,
@@ -22,10 +25,12 @@ async function getBlogs() {
       category,
       publishedAt
     }
-  `);
-
-  // console.log("FINAL BLOGS:", data);
-  return data;
+    `,
+    {},
+    {
+      next: { revalidates: 60 },
+    }
+  );
 }
 
 const blogTopics = [
@@ -343,6 +348,8 @@ export default async function Page() {
     </main>
   );
 }
+
+
 // import React from "react";
 
 // export const metadata = {
