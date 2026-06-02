@@ -6,9 +6,9 @@ export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
 export const metadata = {
-  title: "Digital Marketing Blog in India | SEO, Ads & Growth Tips ",
+  title: "Google Ads vs Meta Ads 2026: Which Platform Is Best for Your Business?",
   description:
-    "Read the latest SEO tips, Google Ads strategies, social media marketing insights, branding ideas, and digital growth articles from Promodaddy Digital.",
+    "Compare Google Ads vs Meta Ads in 2026. Discover costs, ROI, lead quality, targeting, and business use cases to choose the right advertising platform for growth.",
 };
 
 export const revalidates = 60;

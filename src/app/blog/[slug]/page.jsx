@@ -65,6 +65,31 @@ export async function generateMetadata({ params }) {
 }
 
 const portableTextComponents = {
+
+  types: {
+    table: ({ value }) => (
+      <div className="my-8 overflow-x-auto">
+        <table className="w-full border border-white/20">
+          <tbody>
+            {value?.rows?.map((row) => (
+              <tr key={row._key}>
+                {row.cells?.map((cell, index) => (
+                  <td
+                    key={index}
+                    className="border border-white/20 px-4 py-3 text-white"
+                  >
+                    {cell}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    ),
+  },
+
+  
   block: {
     h1: ({ children }) => (
       <h1 className="mt-10 mb-4 text-3xl font-bold leading-tight text-white sm:text-4xl">
